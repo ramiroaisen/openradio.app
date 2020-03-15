@@ -1,0 +1,747 @@
+[
+  {
+    "slug": "angola",
+    "code": "ao",
+    "continentCode": "af"
+  },
+  {
+    "slug": "ivory-coast",
+    "code": "ci",
+    "continentCode": "af"
+  },
+  {
+    "slug": "cape-verde",
+    "code": "cv",
+    "continentCode": "af"
+  },
+  {
+    "slug": "algeria",
+    "code": "dz",
+    "continentCode": "af"
+  },
+  {
+    "slug": "egypt",
+    "code": "eg",
+    "continentCode": "af"
+  },
+  {
+    "slug": "ghana",
+    "code": "gh",
+    "continentCode": "af"
+  },
+  {
+    "slug": "the-gambia",
+    "code": "gm",
+    "continentCode": "af"
+  },
+  {
+    "slug": "kenya",
+    "code": "ke",
+    "continentCode": "af"
+  },
+  {
+    "slug": "comoros",
+    "code": "km",
+    "continentCode": "af"
+  },
+  {
+    "slug": "libya",
+    "code": "ly",
+    "continentCode": "af"
+  },
+  {
+    "slug": "morocco",
+    "code": "ma",
+    "continentCode": "af"
+  },
+  {
+    "slug": "madagascar",
+    "code": "mg",
+    "continentCode": "af"
+  },
+  {
+    "slug": "mali",
+    "code": "ml",
+    "continentCode": "af"
+  },
+  {
+    "slug": "mauritania",
+    "code": "mr",
+    "continentCode": "af"
+  },
+  {
+    "slug": "mauritius",
+    "code": "mu",
+    "continentCode": "af"
+  },
+  {
+    "slug": "mozambique",
+    "code": "mz",
+    "continentCode": "af"
+  },
+  {
+    "slug": "namibia",
+    "code": "na",
+    "continentCode": "af"
+  },
+  {
+    "slug": "nigeria",
+    "code": "ng",
+    "continentCode": "af"
+  },
+  {
+    "slug": "reunion",
+    "code": "re",
+    "continentCode": "af"
+  },
+  {
+    "slug": "rwanda",
+    "code": "rw",
+    "continentCode": "af"
+  },
+  {
+    "slug": "sudan",
+    "code": "sd",
+    "continentCode": "af"
+  },
+  {
+    "slug": "senegal",
+    "code": "sn",
+    "continentCode": "af"
+  },
+  {
+    "slug": "chad",
+    "code": "td",
+    "continentCode": "af"
+  },
+  {
+    "slug": "tunisia",
+    "code": "tn",
+    "continentCode": "af"
+  },
+  {
+    "slug": "tanzania",
+    "code": "tz",
+    "continentCode": "af"
+  },
+  {
+    "slug": "uganda",
+    "code": "ug",
+    "continentCode": "af"
+  },
+  {
+    "slug": "south-africa",
+    "code": "za",
+    "continentCode": "af"
+  },
+  {
+    "slug": "zambia",
+    "code": "zm",
+    "continentCode": "af"
+  },
+  {
+    "slug": "zimbabwe",
+    "code": "zw",
+    "continentCode": "af"
+  },
+  {
+    "slug": "united-arab-emirates",
+    "code": "ae",
+    "continentCode": "as"
+  },
+  {
+    "slug": "afghanistan",
+    "code": "af",
+    "continentCode": "as"
+  },
+  {
+    "slug": "armenia",
+    "code": "am",
+    "continentCode": "as"
+  },
+  {
+    "slug": "azerbaijan",
+    "code": "az",
+    "continentCode": "as"
+  },
+  {
+    "slug": "bangladesh",
+    "code": "bd",
+    "continentCode": "as"
+  },
+  {
+    "slug": "bahrain",
+    "code": "bh",
+    "continentCode": "as"
+  },
+  {
+    "slug": "china",
+    "code": "cn",
+    "continentCode": "as"
+  },
+  {
+    "slug": "cyprus",
+    "code": "cy",
+    "continentCode": "as"
+  },
+  {
+    "slug": "georgia",
+    "code": "ge",
+    "continentCode": "as"
+  },
+  {
+    "slug": "hong-kong",
+    "code": "hk",
+    "continentCode": "as"
+  },
+  {
+    "slug": "indonesia",
+    "code": "id",
+    "continentCode": "as"
+  },
+  {
+    "slug": "israel",
+    "code": "il",
+    "continentCode": "as"
+  },
+  {
+    "slug": "india",
+    "code": "in",
+    "continentCode": "as"
+  },
+  {
+    "slug": "iraq",
+    "code": "iq",
+    "continentCode": "as"
+  },
+  {
+    "slug": "iran",
+    "code": "ir",
+    "continentCode": "as"
+  },
+  {
+    "slug": "jordan",
+    "code": "jo",
+    "continentCode": "as"
+  },
+  {
+    "slug": "japan",
+    "code": "jp",
+    "continentCode": "as"
+  },
+  {
+    "slug": "cambodia",
+    "code": "kh",
+    "continentCode": "as"
+  },
+  {
+    "slug": "republic-of-korea",
+    "code": "kr",
+    "continentCode": "as"
+  },
+  {
+    "slug": "kuwait",
+    "code": "kw",
+    "continentCode": "as"
+  },
+  {
+    "slug": "kazakhstan",
+    "code": "kz",
+    "continentCode": "as"
+  },
+  {
+    "slug": "lebanon",
+    "code": "lb",
+    "continentCode": "as"
+  },
+  {
+    "slug": "sri-lanka",
+    "code": "lk",
+    "continentCode": "as"
+  },
+  {
+    "slug": "mongolia",
+    "code": "mn",
+    "continentCode": "as"
+  },
+  {
+    "slug": "macao",
+    "code": "mo",
+    "continentCode": "as"
+  },
+  {
+    "slug": "malaysia",
+    "code": "my",
+    "continentCode": "as"
+  },
+  {
+    "slug": "nepal",
+    "code": "np",
+    "continentCode": "as"
+  },
+  {
+    "slug": "oman",
+    "code": "om",
+    "continentCode": "as"
+  },
+  {
+    "slug": "philippines",
+    "code": "ph",
+    "continentCode": "as"
+  },
+  {
+    "slug": "pakistan",
+    "code": "pk",
+    "continentCode": "as"
+  },
+  {
+    "slug": "palestine",
+    "code": "ps",
+    "continentCode": "as"
+  },
+  {
+    "slug": "qatar",
+    "code": "qa",
+    "continentCode": "as"
+  },
+  {
+    "slug": "russia",
+    "code": "ru",
+    "continentCode": "as"
+  },
+  {
+    "slug": "saudi-arabia",
+    "code": "sa",
+    "continentCode": "as"
+  },
+  {
+    "slug": "singapore",
+    "code": "sg",
+    "continentCode": "as"
+  },
+  {
+    "slug": "syria",
+    "code": "sy",
+    "continentCode": "as"
+  },
+  {
+    "slug": "thailand",
+    "code": "th",
+    "continentCode": "as"
+  },
+  {
+    "slug": "turkey",
+    "code": "tr",
+    "continentCode": "as"
+  },
+  {
+    "slug": "taiwan",
+    "code": "tw",
+    "continentCode": "as"
+  },
+  {
+    "slug": "vietnam",
+    "code": "vn",
+    "continentCode": "as"
+  },
+  {
+    "slug": "yemen",
+    "code": "ye",
+    "continentCode": "as"
+  },
+  {
+    "slug": "andorra",
+    "code": "ad",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "albania",
+    "code": "al",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "austria",
+    "code": "at",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "bosnia-and-herzegovina",
+    "code": "ba",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "belgium",
+    "code": "be",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "bulgaria",
+    "code": "bg",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "belarus",
+    "code": "by",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "switzerland",
+    "code": "ch",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "czech-republic",
+    "code": "cz",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "germany",
+    "code": "de",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "denmark",
+    "code": "dk",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "estonia",
+    "code": "ee",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "spain",
+    "code": "es",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "finland",
+    "code": "fi",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "france",
+    "code": "fr",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "united-kingdom",
+    "code": "gb",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "greece",
+    "code": "gr",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "croatia",
+    "code": "hr",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "hungary",
+    "code": "hu",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "ireland",
+    "code": "ie",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "iceland",
+    "code": "is",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "italy",
+    "code": "it",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "lithuania",
+    "code": "lt",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "luxembourg",
+    "code": "lu",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "latvia",
+    "code": "lv",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "republic-of-moldova",
+    "code": "md",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "montenegro",
+    "code": "me",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "macedonia",
+    "code": "mk",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "malta",
+    "code": "mt",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "netherlands",
+    "code": "nl",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "norway",
+    "code": "no",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "poland",
+    "code": "pl",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "portugal",
+    "code": "pt",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "romania",
+    "code": "ro",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "serbia",
+    "code": "rs",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "sweden",
+    "code": "se",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "slovenia",
+    "code": "si",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "slovak-republic",
+    "code": "sk",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "ukraine",
+    "code": "ua",
+    "continentCode": "eu"
+  },
+  {
+    "slug": "antigua-and-barbuda",
+    "code": "ag",
+    "continentCode": "na"
+  },
+  {
+    "slug": "anguilla",
+    "code": "ai",
+    "continentCode": "na"
+  },
+  {
+    "slug": "bahamas",
+    "code": "bs",
+    "continentCode": "na"
+  },
+  {
+    "slug": "belize",
+    "code": "bz",
+    "continentCode": "na"
+  },
+  {
+    "slug": "canada",
+    "code": "ca",
+    "continentCode": "na"
+  },
+  {
+    "slug": "costa-rica",
+    "code": "cr",
+    "continentCode": "na"
+  },
+  {
+    "slug": "cuba",
+    "code": "cu",
+    "continentCode": "na"
+  },
+  {
+    "slug": "dominica",
+    "code": "dm",
+    "continentCode": "na"
+  },
+  {
+    "slug": "dominican-republic",
+    "code": "do",
+    "continentCode": "na"
+  },
+  {
+    "slug": "guatemala",
+    "code": "gt",
+    "continentCode": "na"
+  },
+  {
+    "slug": "honduras",
+    "code": "hn",
+    "continentCode": "na"
+  },
+  {
+    "slug": "haiti",
+    "code": "ht",
+    "continentCode": "na"
+  },
+  {
+    "slug": "jamaica",
+    "code": "jm",
+    "continentCode": "na"
+  },
+  {
+    "slug": "saint-lucia",
+    "code": "lc",
+    "continentCode": "na"
+  },
+  {
+    "slug": "mexico",
+    "code": "mx",
+    "continentCode": "na"
+  },
+  {
+    "slug": "nicaragua",
+    "code": "ni",
+    "continentCode": "na"
+  },
+  {
+    "slug": "panama",
+    "code": "pa",
+    "continentCode": "na"
+  },
+  {
+    "slug": "puerto-rico",
+    "code": "pr",
+    "continentCode": "na"
+  },
+  {
+    "slug": "el-salvador",
+    "code": "sv",
+    "continentCode": "na"
+  },
+  {
+    "slug": "trinidad-and-tobago",
+    "code": "tt",
+    "continentCode": "na"
+  },
+  {
+    "slug": "united-states",
+    "code": "us",
+    "continentCode": "na"
+  },
+  {
+    "slug": "american-samoa",
+    "code": "as",
+    "continentCode": "oc"
+  },
+  {
+    "slug": "australia",
+    "code": "au",
+    "continentCode": "oc"
+  },
+  {
+    "slug": "new-zealand",
+    "code": "nz",
+    "continentCode": "oc"
+  },
+  {
+    "slug": "argentina",
+    "code": "ar",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "aruba",
+    "code": "aw",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "bolivia",
+    "code": "bo",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "brazil",
+    "code": "br",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "chile",
+    "code": "cl",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "colombia",
+    "code": "co",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "curacao",
+    "code": "cw",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "ecuador",
+    "code": "ec",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "french-guiana",
+    "code": "gf",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "guyana",
+    "code": "gy",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "peru",
+    "code": "pe",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "paraguay",
+    "code": "py",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "suriname",
+    "code": "sr",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "sint-maarten",
+    "code": "sx",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "uruguay",
+    "code": "uy",
+    "continentCode": "sa"
+  },
+  {
+    "slug": "venezuela",
+    "code": "ve",
+    "continentCode": "sa"
+  }
+]

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="%sapper.lang%">
+<head>
+	<meta charset="utf-8">
+	
+	<meta property="og:site_name" content="openradio.app">
+	<meta property="og:type" content="website">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="theme-color" content="#333333">
+	
+	%sapper.base%
+	<!--<link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">-->
+	<link rel="stylesheet" href="/static/fonts/muli/muli.min.css">
+	<link rel="stylesheet" href="/static/global.min.css">
+	<link rel="manifest" href="/manifest.json">
+	
+	<link rel="icon" type="image/png" href="/static/img/icons/v1/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/img/icons/v1/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/img/icons/v1/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/img/icons/v1/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/img/icons/v1/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/img/icons/v1/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/img/icons/v1/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/img/icons/v1/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/img/icons/v1/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/icons/v1/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/static/img/icons/v1/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/img/icons/v1/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/static/img/icons/v1/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/img/icons/v1/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/static/img/icons/v1/ms-icon-144x144.png">
+	
+	<link rel="preconnect" href="https://www.google-analytics.com">
+	<link rel="preconnect" href="https://www.googletagmanager.com">
+	<!--
+		<script data-ad-client="ca-pub-6229656373494263" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	-->
+
+	<!-- Sapper generates a <style> tag containing critical CSS
+	     for the current page. CSS for the rest of the app is
+	     lazily loaded when it precaches secondary pages -->
+	%sapper.styles%
+
+	<!-- This contains the contents of the <svelte:head> component, if
+	     the current page has one -->
+	%sapper.head%
+</head>
+<body>
+	<!-- The application will be rendered inside this element,
+	     because `src/client.js` references it -->
+	<div id="sapper">%sapper.html%</div>
+
+<!-- deferjs -->
+<script>
+	!function(e,o,t,n,i,d){function f(e,t){d?n(e,t||32):i.push(e,t)}function c(e,t,n,i){return t&&o.getElementById(t)||(i=o.createElement(e||'SCRIPT'),t&&(i.id=t),n&&(i.onload=n),o.head.appendChild(i)),i||{}}d=/p/.test(o.readyState),e.addEventListener('on'+t in e?t:'load',function(){for(d=1;i[0];)f(i.shift(),i.shift())}),f._=c,e.defer=f,e.deferscript=function(e,t,n,i){f(function(){c('',t,i).src=e},n)}}(this,document,'pageshow',setTimeout,[]);
+</script>
+
+<!-- Sapper creates a <script> tag containing `src/client.js`
+     and anything else it needs to hydrate the app and
+     initialise the router -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+%sapper.scripts%
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+	if(location.host === "openradio.app" && location.port === ""){
+		//const script = document.createElement("script");
+		//script.src = "https://www.googletagmanager.com/gtag/js?id=UA-152513630-1";
+		//script.async = true;
+		//const target = document.getElementsByTagName("script")[0];
+		//target.parentElement.insertBefore(script, target);
+		deferscript("https://www.googletagmanager.com/gtag/js?id=UA-152513630-1", "google-tag", 500);
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-152513630-1');
+	}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+# GLOBAL URLS
+/ => /:ll
+/languages    => /:ll/languages
+/recents      => /:ll/recents
+/radio-:tt    => /:ll/radio-:tt
+/radio-:tt/:f => /:ll/radio-:tt/:f
+/search       => /:ll/search
+
+/xx => /:ll
+/xx/languages    => /:ll/languages
+/xx/recents      => /:ll/recents
+/xx/radio-:tt    => /:ll/radio-:tt
+/xx/radio-:tt/:f => /:ll/radio-:tt/:f
+/xx/search       => /:ll/search
+
+# COUNTRY URLS
+/xx-:cc/radio-:tt     => /:ll-:cc/radio-:tt 
+/xx-:cc/radio-:tt/:f  => /:ll-:cc/radio-fm/:f
+/xx-:cc/radio/:s      => /:ll-:cc/radio/:s
+
+# OLDER
+/:cc/radio-am => /:ll-:cc/radio-am
+/:cc/radio-fm => /:ll-:cc/radio-fm
+
+/:cc/radio-am/:f => /:ll-:cc/radio-am/:f
+/:cc/radio-fm/:f => /:ll-:cc/radio-fm/:f
+
+/:cc/search => /:ll-:cc/search
+/:cc/radio/:s => /:ll-:cc/radio/:s
+
+# OLDER OLDER
+/escuchar-:s-en-vivo  => 301 /es-ar/radio/:s  
+/radios-de-:region    => 301 /
+/genero/:g            => 301 /

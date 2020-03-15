@@ -1,0 +1,24 @@
+[package]
+name = "openradio-search"
+version = "0.1.0"
+authors = ["Ramiro <ramiroaisen@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mongodb = "*"
+unidecode = "*"
+bson = "*"
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
+math = "*"
+ngrams = "*"
+atty = "*"
+fuzzy-matcher = "*"
+#num_cpus = "*"
+rayon = "1.1"
+tokio = { version = "*", features = ["full"] }
+futures = "*"
+ws = "*"

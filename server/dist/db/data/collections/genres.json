@@ -1,0 +1,524 @@
+[
+    {
+        "_id": "5e4b119fcff5433d3848478e",
+        "name": "60s",
+        "slug": "60s",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d3848478f",
+        "name": "70s",
+        "slug": "70s",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484790",
+        "name": "80s",
+        "slug": "80s",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484791",
+        "name": "90s",
+        "slug": "90s",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484792",
+        "name": "AAA - Adult Album Alternative",
+        "slug": "aaa-adult-album-alternative",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484793",
+        "name": "Adult Contemporary",
+        "slug": "adult-contemporary",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484794",
+        "name": "Alternative Rock",
+        "slug": "alternative-rock",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484795",
+        "name": "Arabic Music",
+        "slug": "arabic-music",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484796",
+        "name": "Blues",
+        "slug": "blues",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484797",
+        "name": "Bollywood",
+        "slug": "bollywood",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484798",
+        "name": "Bossa Nova",
+        "slug": "bossa-nova",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d38484799",
+        "name": "Brazilian Music",
+        "slug": "brazilian-music",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d3848479a",
+        "name": "Business",
+        "slug": "business",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d3848479b",
+        "name": "Caribbean",
+        "slug": "caribbean",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d3848479c",
+        "name": "Catholic",
+        "slug": "catholic",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d3848479d",
+        "name": "Children’s Music",
+        "slug": "childrens-music",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d3848479e",
+        "name": "Chillout",
+        "slug": "chillout",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d3848479f",
+        "name": "Christian",
+        "slug": "christian",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a0",
+        "name": "Christian Contemporary",
+        "slug": "christian-contemporary",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a1",
+        "name": "Christmas",
+        "slug": "christmas",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a2",
+        "name": "Classical",
+        "slug": "classical",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a3",
+        "name": "Classic Country",
+        "slug": "classic-country",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a4",
+        "name": "Classic Hits",
+        "slug": "classic-hits",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a5",
+        "name": "Classic Rock",
+        "slug": "classic-rock",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a6",
+        "name": "College",
+        "slug": "college",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a7",
+        "name": "Comedy",
+        "slug": "comedy",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a8",
+        "name": "Community",
+        "slug": "community",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847a9",
+        "name": "Country",
+        "slug": "country",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847aa",
+        "name": "Culture",
+        "slug": "culture",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847ab",
+        "name": "Dance",
+        "slug": "dance",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847ac",
+        "name": "Disco",
+        "slug": "disco",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847ad",
+        "name": "Easy Listening",
+        "slug": "easy-listening",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847ae",
+        "name": "Eclectic",
+        "slug": "eclectic",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847af",
+        "name": "EDM - Electronic Dance Music",
+        "slug": "edm-electronic-dance-music",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b0",
+        "name": "Educational",
+        "slug": "educational",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b1",
+        "name": "Electronic",
+        "slug": "electronic",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b2",
+        "name": "Ethnic",
+        "slug": "ethnic",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b3",
+        "name": "Euro Hits",
+        "slug": "euro-hits",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b4",
+        "name": "Folk",
+        "slug": "folk",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b5",
+        "name": "Gospel",
+        "slug": "gospel",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b6",
+        "name": "Hindi",
+        "slug": "hindi",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b7",
+        "name": "Hip Hop",
+        "slug": "hip-hop",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b8",
+        "name": "Hot AC",
+        "slug": "hot-ac",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847b9",
+        "name": "House",
+        "slug": "house",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847ba",
+        "name": "Indie",
+        "slug": "indie",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847bb",
+        "name": "International",
+        "slug": "international",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847bc",
+        "name": "Islam",
+        "slug": "islam",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847bd",
+        "name": "Jazz",
+        "slug": "jazz",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847be",
+        "name": "J-pop",
+        "slug": "j-pop",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847bf",
+        "name": "K-pop",
+        "slug": "k-pop",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c0",
+        "name": "Latino",
+        "slug": "latino",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c1",
+        "name": "Local",
+        "slug": "local",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c2",
+        "name": "Lounge",
+        "slug": "lounge",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c3",
+        "name": "Malayalam",
+        "slug": "malayalam",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c4",
+        "name": "Manele",
+        "slug": "manele",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c5",
+        "name": "Merengue",
+        "slug": "merengue",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c6",
+        "name": "Metal",
+        "slug": "metal",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c7",
+        "name": "Mexican Music",
+        "slug": "mexican-music",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c8",
+        "name": "Modern Rock",
+        "slug": "modern-rock",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847c9",
+        "name": "News",
+        "slug": "news",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847ca",
+        "name": "News Podcast",
+        "slug": "news-podcast",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847cb",
+        "name": "Oldies",
+        "slug": "oldies",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847cc",
+        "name": "Pop Music",
+        "slug": "pop-music",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847cd",
+        "name": "Public",
+        "slug": "public",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847ce",
+        "name": "R&B",
+        "slug": "rb",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847cf",
+        "name": "Reggae",
+        "slug": "reggae",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d0",
+        "name": "Reggaeton",
+        "slug": "reggaeton",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d1",
+        "name": "Regional",
+        "slug": "regional",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d2",
+        "name": "Religious",
+        "slug": "religious",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d3",
+        "name": "Rock",
+        "slug": "rock",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d4",
+        "name": "Romantic",
+        "slug": "romantic",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d5",
+        "name": "Salsa",
+        "slug": "salsa",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d6",
+        "name": "Scanner",
+        "slug": "scanner",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d7",
+        "name": "Schlager",
+        "slug": "schlager",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d8",
+        "name": "Smooth Jazz",
+        "slug": "smooth-jazz",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847d9",
+        "name": "Soul",
+        "slug": "soul",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847da",
+        "name": "Soundtracks",
+        "slug": "soundtracks",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847db",
+        "name": "Spirituality",
+        "slug": "spirituality",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847dc",
+        "name": "Sports",
+        "slug": "sports",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847dd",
+        "name": "Talk",
+        "slug": "talk",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847de",
+        "name": "Tamil",
+        "slug": "tamil",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847df",
+        "name": "Techno",
+        "slug": "techno",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847e0",
+        "name": "Top 40",
+        "slug": "top-40",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847e1",
+        "name": "Traffic",
+        "slug": "traffic",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847e2",
+        "name": "Trance",
+        "slug": "trance",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847e3",
+        "name": "Variety",
+        "slug": "variety",
+        "count": 0
+    },
+    {
+        "_id": "5e4b119fcff5433d384847e4",
+        "name": "World Music",
+        "slug": "world-music",
+        "count": 0
+    }
+]

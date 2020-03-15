@@ -1,0 +1,350 @@
+[
+    {
+        "name": "60s",
+        "slug": "60s"
+    },
+    {
+        "name": "70s",
+        "slug": "70s"
+    },
+    {
+        "name": "80s",
+        "slug": "80s"
+    },
+    {
+        "name": "90s",
+        "slug": "90s"
+    },
+    {
+        "name": "AAA - Adult Album Alternative",
+        "slug": "aaa-adult-album-alternative"
+    },
+    {
+        "name": "Adult Contemporary",
+        "slug": "adult-contemporary"
+    },
+    {
+        "name": "Alternative Rock",
+        "slug": "alternative-rock"
+    },
+    {
+        "name": "Arabic Music",
+        "slug": "arabic-music"
+    },
+    {
+        "name": "Blues",
+        "slug": "blues"
+    },
+    {
+        "name": "Bollywood",
+        "slug": "bollywood"
+    },
+    {
+        "name": "Bossa Nova",
+        "slug": "bossa-nova"
+    },
+    {
+        "name": "Brazilian Music",
+        "slug": "brazilian-music"
+    },
+    {
+        "name": "Business",
+        "slug": "business"
+    },
+    {
+        "name": "Caribbean",
+        "slug": "caribbean"
+    },
+    {
+        "name": "Catholic",
+        "slug": "catholic"
+    },
+    {
+        "name": "Children’s Music",
+        "slug": "childrens-music"
+    },
+    {
+        "name": "Chillout",
+        "slug": "chillout"
+    },
+    {
+        "name": "Christian",
+        "slug": "christian"
+    },
+    {
+        "name": "Christian Contemporary",
+        "slug": "christian-contemporary"
+    },
+    {
+        "name": "Christmas",
+        "slug": "christmas"
+    },
+    {
+        "name": "Classical",
+        "slug": "classical"
+    },
+    {
+        "name": "Classic Country",
+        "slug": "classic-country"
+    },
+    {
+        "name": "Classic Hits",
+        "slug": "classic-hits"
+    },
+    {
+        "name": "Classic Rock",
+        "slug": "classic-rock"
+    },
+    {
+        "name": "College",
+        "slug": "college"
+    },
+    {
+        "name": "Comedy",
+        "slug": "comedy"
+    },
+    {
+        "name": "Community",
+        "slug": "community"
+    },
+    {
+        "name": "Country",
+        "slug": "country"
+    },
+    {
+        "name": "Culture",
+        "slug": "culture"
+    },
+    {
+        "name": "Dance",
+        "slug": "dance"
+    },
+    {
+        "name": "Disco",
+        "slug": "disco"
+    },
+    {
+        "name": "Easy Listening",
+        "slug": "easy-listening"
+    },
+    {
+        "name": "Eclectic",
+        "slug": "eclectic"
+    },
+    {
+        "name": "EDM - Electronic Dance Music",
+        "slug": "edm-electronic-dance-music"
+    },
+    {
+        "name": "Educational",
+        "slug": "educational"
+    },
+    {
+        "name": "Electronic",
+        "slug": "electronic"
+    },
+    {
+        "name": "Ethnic",
+        "slug": "ethnic"
+    },
+    {
+        "name": "Euro Hits",
+        "slug": "euro-hits"
+    },
+    {
+        "name": "Folk",
+        "slug": "folk"
+    },
+    {
+        "name": "Gospel",
+        "slug": "gospel"
+    },
+    {
+        "name": "Hindi",
+        "slug": "hindi"
+    },
+    {
+        "name": "Hip Hop",
+        "slug": "hip-hop"
+    },
+    {
+        "name": "Hot AC",
+        "slug": "hot-ac"
+    },
+    {
+        "name": "House",
+        "slug": "house"
+    },
+    {
+        "name": "Indie",
+        "slug": "indie"
+    },
+    {
+        "name": "International",
+        "slug": "international"
+    },
+    {
+        "name": "Islam",
+        "slug": "islam"
+    },
+    {
+        "name": "Jazz",
+        "slug": "jazz"
+    },
+    {
+        "name": "J-pop",
+        "slug": "j-pop"
+    },
+    {
+        "name": "K-pop",
+        "slug": "k-pop"
+    },
+    {
+        "name": "Latino",
+        "slug": "latino"
+    },
+    {
+        "name": "Local",
+        "slug": "local"
+    },
+    {
+        "name": "Lounge",
+        "slug": "lounge"
+    },
+    {
+        "name": "Malayalam",
+        "slug": "malayalam"
+    },
+    {
+        "name": "Manele",
+        "slug": "manele"
+    },
+    {
+        "name": "Merengue",
+        "slug": "merengue"
+    },
+    {
+        "name": "Metal",
+        "slug": "metal"
+    },
+    {
+        "name": "Mexican Music",
+        "slug": "mexican-music"
+    },
+    {
+        "name": "Modern Rock",
+        "slug": "modern-rock"
+    },
+    {
+        "name": "News",
+        "slug": "news"
+    },
+    {
+        "name": "News Podcast",
+        "slug": "news-podcast"
+    },
+    {
+        "name": "Oldies",
+        "slug": "oldies"
+    },
+    {
+        "name": "Pop Music",
+        "slug": "pop-music"
+    },
+    {
+        "name": "Public",
+        "slug": "public"
+    },
+    {
+        "name": "R&B",
+        "slug": "rb"
+    },
+    {
+        "name": "Reggae",
+        "slug": "reggae"
+    },
+    {
+        "name": "Reggaeton",
+        "slug": "reggaeton"
+    },
+    {
+        "name": "Regional",
+        "slug": "regional"
+    },
+    {
+        "name": "Religious",
+        "slug": "religious"
+    },
+    {
+        "name": "Rock",
+        "slug": "rock"
+    },
+    {
+        "name": "Romantic",
+        "slug": "romantic"
+    },
+    {
+        "name": "Salsa",
+        "slug": "salsa"
+    },
+    {
+        "name": "Scanner",
+        "slug": "scanner"
+    },
+    {
+        "name": "Schlager",
+        "slug": "schlager"
+    },
+    {
+        "name": "Smooth Jazz",
+        "slug": "smooth-jazz"
+    },
+    {
+        "name": "Soul",
+        "slug": "soul"
+    },
+    {
+        "name": "Soundtracks",
+        "slug": "soundtracks"
+    },
+    {
+        "name": "Spirituality",
+        "slug": "spirituality"
+    },
+    {
+        "name": "Sports",
+        "slug": "sports"
+    },
+    {
+        "name": "Talk",
+        "slug": "talk"
+    },
+    {
+        "name": "Tamil",
+        "slug": "tamil"
+    },
+    {
+        "name": "Techno",
+        "slug": "techno"
+    },
+    {
+        "name": "Top 40",
+        "slug": "top-40"
+    },
+    {
+        "name": "Traffic",
+        "slug": "traffic"
+    },
+    {
+        "name": "Trance",
+        "slug": "trance"
+    },
+    {
+        "name": "Variety",
+        "slug": "variety"
+    },
+    {
+        "name": "World Music",
+        "slug": "world-music"
+    }
+]

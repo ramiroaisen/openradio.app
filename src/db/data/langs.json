@@ -1,0 +1,247 @@
+{
+  "ar": {
+    "code": "ar",
+    "native": "اللغة العربية",
+    "en": "Arabic"
+  },
+  "az": {
+    "code": "az",
+    "native": "azərbaycan dili",
+    "en": "Azerbaijani"
+  },
+  "be": {
+    "code": "be",
+    "native": "беларуская мова",
+    "en": "Belarusian"
+  },
+  "bg": {
+    "code": "bg",
+    "native": "български език",
+    "en": "Bulgarian"
+  },
+  "bs": {
+    "code": "bs",
+    "native": "bosanski jezik",
+    "en": "Bosnian"
+  },
+  "ca": {
+    "code": "ca",
+    "native": "català",
+    "en": "Catalan"
+  },
+  "cs": {
+    "code": "cs",
+    "native": "čeština",
+    "en": "Czech"
+  },
+  "da": {
+    "code": "da",
+    "native": "dansk",
+    "en": "Danish"
+  },
+  "de": {
+    "code": "de",
+    "native": "Deutsch",
+    "en": "German"
+  },
+  "el": {
+    "code": "el",
+    "native": "Ελληνικά",
+    "en": "Greek"
+  },
+  "en": {
+    "code": "en",
+    "native": "English",
+    "en": "English"
+  },
+  "es": {
+    "code": "es",
+    "native": "Español",
+    "en": "Spanish"
+  },
+  "et": {
+    "code": "et",
+    "native": "eesti",
+    "en": "Estonian"
+  },
+  "fa": {
+    "code": "fa",
+    "native": "فارسی",
+    "en": "Persian"
+  },
+  "fi": {
+    "code": "fi",
+    "native": "suomi",
+    "en": "Finnish"
+  },
+  "fr": {
+    "code": "fr",
+    "native": "Français",
+    "en": "French"
+  },
+  "he": {
+    "code": "he",
+    "native": "עברית",
+    "en": "Hebrew"
+  },
+  "hr": {
+    "code": "hr",
+    "native": "hrvatski jezik",
+    "en": "Croatian"
+  },
+  "hu": {
+    "code": "hu",
+    "native": "magyar",
+    "en": "Hungarian"
+  },
+  "hy": {
+    "code": "hy",
+    "native": "Հայերեն",
+    "en": "Armenian"
+  },
+  "id": {
+    "code": "id",
+    "native": "Indonesian",
+    "en": "Indonesian"
+  },
+  "it": {
+    "code": "it",
+    "native": "Italiano",
+    "en": "Italian"
+  },
+  "ja": {
+    "code": "ja",
+    "native": "日本語",
+    "en": "Japanese"
+  },
+  "ka": {
+    "code": "ka",
+    "native": "ქართული",
+    "en": "Georgian"
+  },
+  "kk": {
+    "code": "kk",
+    "native": "қазақ тілі",
+    "en": "Kazakh"
+  },
+  "ko": {
+    "code": "ko",
+    "native": "한국어",
+    "en": "Korean"
+  },
+  "ky": {
+    "code": "ky",
+    "native": "Кыргызча",
+    "en": "Kyrgyz"
+  },
+  "lt": {
+    "code": "lt",
+    "native": "lietuvių kalba",
+    "en": "Lithuanian"
+  },
+  "lv": {
+    "code": "lv",
+    "native": "latviešu valoda",
+    "en": "Latvian"
+  },
+  "mk": {
+    "code": "mk",
+    "native": "македонски јазик",
+    "en": "Macedonian"
+  },
+  "mn": {
+    "code": "mn",
+    "native": "Монгол хэл",
+    "en": "Mongolian"
+  },
+  "nb": {
+    "code": "nb",
+    "native": "Norsk bokmål",
+    "en": "Norwegian Bokmål"
+  },
+  "nl": {
+    "code": "nl",
+    "native": "Nederlands",
+    "en": "Dutch"
+  },
+  "nn": {
+    "code": "nn",
+    "native": "Norsk nynorsk",
+    "en": "Norwegian Nynorsk"
+  },
+  "pl": {
+    "code": "pl",
+    "native": "język polski",
+    "en": "Polish"
+  },
+  "pt": {
+    "code": "pt",
+    "native": "Português",
+    "en": "Portuguese"
+  },
+  "ro": {
+    "code": "ro",
+    "native": "Română",
+    "en": "Romanian"
+  },
+  "ru": {
+    "code": "ru",
+    "native": "Русский",
+    "en": "Russian"
+  },
+  "sk": {
+    "code": "sk",
+    "native": "slovenčina",
+    "en": "Slovak"
+  },
+  "sl": {
+    "code": "sl",
+    "native": "slovenski jezik",
+    "en": "Slovene"
+  },
+  "sr": {
+    "code": "sr",
+    "native": "српски језик",
+    "en": "Serbian"
+  },
+  "sv": {
+    "code": "sv",
+    "native": "svenska",
+    "en": "Swedish"
+  },
+  "th": {
+    "code": "th",
+    "native": "ไทย",
+    "en": "Thai"
+  },
+  "tr": {
+    "code": "tr",
+    "native": "Türkçe",
+    "en": "Turkish"
+  },
+  "uk": {
+    "code": "uk",
+    "native": "Українська",
+    "en": "Ukrainian"
+  },
+  "ur": {
+    "code": "ur",
+    "native": "اردو",
+    "en": "Urdu"
+  },
+  "uz": {
+    "code": "uz",
+    "native": "Ўзбек",
+    "en": "Uzbek"
+  },
+  "vi": {
+    "code": "vi",
+    "native": "Tiếng Việt",
+    "en": "Vietnamese"
+  },
+  "zh": {
+    "code": "zh",
+    "native": "中文",
+    "en": "Chinese"
+  }
+}

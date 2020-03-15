@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Africa",
+        "slug": "africa",
+        "code": "af"
+    },
+    {
+        "name": "Asia",
+        "slug": "asia",
+        "code": "as"
+    },
+    {
+        "name": "Europe",
+        "slug": "europe",
+        "code": "eu"
+    },
+    {
+        "name": "Oceania",
+        "slug": "oceania",
+        "code": "oc"
+    },
+    {
+        "name": "North America",
+        "slug": "north-america",
+        "code": "na"
+    },
+    {
+        "name": "South America",
+        "slug": "south-america",
+        "code": "sa"
+    }
+]

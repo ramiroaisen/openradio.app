@@ -1,0 +1,134 @@
+{
+  "bundler": "rollup",
+  "shimport": "1.0.1",
+  "assets": {
+    "main": "client.6993bbfa.js"
+  },
+  "css": {
+    "main": "main.3894926119.css",
+    "chunks": {
+      "[lang([a-z]{2})]/index.svelte": [
+        "index.91424d0c.css",
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css"
+      ],
+      "[lang([a-z]{2})]/languages.svelte": [
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css",
+        "LinkListBox.87830f68.css"
+      ],
+      "[lang([a-z]{2})]/recents.svelte": [
+        "recents.b459b2b0.css",
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css",
+        "RadioList.2baef62d.css"
+      ],
+      "[lang([a-z]{2})]/radio-[signalType(am|fm)]/index.svelte": [
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css",
+        "LinkListBox.87830f68.css"
+      ],
+      "[lang([a-z]{2})]/radio-[signalType(am|fm)]/[signalFrec([0-9]+|[0-9]+.[0-9]+)].svelte": [
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css",
+        "RadioList.2baef62d.css"
+      ],
+      "[lang([a-z]{2})]/search.svelte": [
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css",
+        "RadioList.2baef62d.css",
+        "search.ee40617c.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/index.svelte": [
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css",
+        "RadioList.2baef62d.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/radio-[signalType(am|fm)]/index.svelte": [
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css",
+        "LinkListBox.87830f68.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/radio-[signalType(am|fm)]/[signalFrec([0-9]+|[0-9]+.[0-9]+)].svelte": [
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css",
+        "RadioList.2baef62d.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/search.svelte": [
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css",
+        "RadioList.2baef62d.css",
+        "search.ee40617c.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/radio/[station].svelte": [
+        "[station].936e4d70.css",
+        "client.6993bbfa.css",
+        "Page.5e1ac8ce.css"
+      ]
+    }
+  },
+  "legacy_assets": {
+    "main": "client.a8624d55.js"
+  },
+  "js": {
+    "[lang([a-z]{2})]/index.svelte": [
+      "index.91424d0c.js",
+      "Page.5e1ac8ce.js"
+    ],
+    "[lang([a-z]{2})]/languages.svelte": [
+      "languages.aef5e63d.js",
+      "Page.5e1ac8ce.js",
+      "LinkListBox.87830f68.js"
+    ],
+    "[lang([a-z]{2})]/recents.svelte": [
+      "recents.b459b2b0.js",
+      "Page.5e1ac8ce.js",
+      "RadioList.2baef62d.js"
+    ],
+    "[lang([a-z]{2})]/radio-[signalType(am|fm)]/index.svelte": [
+      "index.3599fd8b.js",
+      "Page.5e1ac8ce.js",
+      "LinkListBox.87830f68.js",
+      "signalList.2dcecf8d.js"
+    ],
+    "[lang([a-z]{2})]/radio-[signalType(am|fm)]/[signalFrec([0-9]+|[0-9]+.[0-9]+)].svelte": [
+      "[signalFrec([0-9]+|[0-9]+.[0-9]+)].7e66a464.js",
+      "Page.5e1ac8ce.js",
+      "RadioList.2baef62d.js",
+      "signal.e2f9c219.js"
+    ],
+    "[lang([a-z]{2})]/search.svelte": [
+      "search.4db7821e.js",
+      "Page.5e1ac8ce.js",
+      "RadioList.2baef62d.js",
+      "search.ee40617c.js"
+    ],
+    "[langCountry([a-z]{2}-[a-z]{2})]/index.svelte": [
+      "index.86a8d6fa.js",
+      "Page.5e1ac8ce.js",
+      "RadioList.2baef62d.js"
+    ],
+    "[langCountry([a-z]{2}-[a-z]{2})]/radio-[signalType(am|fm)]/index.svelte": [
+      "index.9b9cb5b5.js",
+      "Page.5e1ac8ce.js",
+      "LinkListBox.87830f68.js",
+      "signalList.2dcecf8d.js"
+    ],
+    "[langCountry([a-z]{2}-[a-z]{2})]/radio-[signalType(am|fm)]/[signalFrec([0-9]+|[0-9]+.[0-9]+)].svelte": [
+      "[signalFrec([0-9]+|[0-9]+.[0-9]+)].a07a265d.js",
+      "Page.5e1ac8ce.js",
+      "RadioList.2baef62d.js",
+      "signal.e2f9c219.js"
+    ],
+    "[langCountry([a-z]{2}-[a-z]{2})]/search.svelte": [
+      "search.4f8254a5.js",
+      "Page.5e1ac8ce.js",
+      "RadioList.2baef62d.js",
+      "search.ee40617c.js"
+    ],
+    "[langCountry([a-z]{2}-[a-z]{2})]/radio/[station].svelte": [
+      "[station].936e4d70.js",
+      "Page.5e1ac8ce.js"
+    ]
+  }
+}
