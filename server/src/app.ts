@@ -17,7 +17,7 @@ import morgan from "morgan";
 import helmet from "helmet";
 
 import {getClientIp} from "request-ip";
-import geoip from "geoip-lite";
+import {geoip} from "./types/geoip-country";
 
 import * as redirects from "./redirects";
 import * as api from "./api";

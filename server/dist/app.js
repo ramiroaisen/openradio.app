@@ -22,7 +22,7 @@ const compression_1 = __importDefault(require("compression"));
 const morgan_1 = __importDefault(require("morgan"));
 const helmet_1 = __importDefault(require("helmet"));
 const request_ip_1 = require("request-ip");
-const geoip_lite_1 = __importDefault(require("geoip-lite"));
+const geoip_country_1 = require("./types/geoip-country");
 const redirects = __importStar(require("./redirects"));
 const api = __importStar(require("./api"));
 //const i18n = require("./i18n/server");
@@ -54,7 +54,7 @@ exports.start = async (sapper) => {
         const ip = request_ip_1.getClientIp(req);
         if (ip != null) {
             req.realIp = ip;
-            const info = geoip_lite_1.default.lookup(ip);
+            const info = geoip_country_1.geoip.lookup(ip);
             if (info && info.country) {
                 const code = info.country.toLowerCase();
                 req.ipCountry = await countries.findOne({ code });
