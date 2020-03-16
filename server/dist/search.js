@@ -39,7 +39,7 @@ exports.getSearcher = async () => {
         client.send(JSON.stringify(out))
       })
     })*/
-    const client = await new Promise(resolve => child.stdout.once("data", async (url) => {
+    const clientp = new Promise(resolve => child.stdout.once("data", async (url) => {
         console.log(`[search] index created in ${Date.now() - start}ms`);
         const client = new ws_1.default("ws://127.0.0.1:3000");
         await new Promise(resolve => client.on("open", resolve));
@@ -64,7 +64,8 @@ exports.getSearcher = async () => {
         }, 5000);
         resolve(client);
     }));
-    const search = (query) => {
+    const search = async (query) => {
+        const client = await clientp;
         return new Promise(resolve => {
             const start = Date.now();
             const id = exports.uid();

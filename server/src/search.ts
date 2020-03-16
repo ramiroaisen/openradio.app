@@ -83,7 +83,7 @@ export const getSearcher = async () => {
     })
   })*/
 
-  const client = await new Promise<Ws>(resolve => child.stdout.once("data", async url => {
+  const clientp = new Promise<Ws>(resolve => child.stdout.once("data", async url => {
 
     console.log(`[search] index created in ${Date.now() - start}ms`);
 
@@ -114,7 +114,8 @@ export const getSearcher = async () => {
     resolve(client);
   }));
 
-  const search = (query: Query) => {
+  const search = async (query: Query) => {
+    const client = await clientp; 
     return new Promise(resolve => {
       const start = Date.now();
       const id = uid();

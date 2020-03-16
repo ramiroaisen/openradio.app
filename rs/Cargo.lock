@@ -832,6 +832,7 @@ version = "0.1.0"
 dependencies = [
  "atty",
  "bson",
+ "lazy_static",
  "math",
  "mongodb",
  "ngrams",

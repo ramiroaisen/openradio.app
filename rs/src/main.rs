@@ -1,9 +1,12 @@
 #![allow(non_snake_case)]
 
+#[macro_use]
+extern crate lazy_static;
+
 extern crate ws;
 
-use std::sync::{Arc, RwLock};
-
+//use std::sync::{Arc, RwLock};
+    
 extern crate unidecode;
 use unidecode::unidecode;
 
@@ -419,9 +422,11 @@ pub fn sort(a: &(f32, &Item), b: &(f32, &Item)) -> std::cmp::Ordering {
     .then(a.1.order.partial_cmp(&b.1.order).unwrap())
 }
 
-pub fn search(index: &Index, query: &Query) -> io::Result {
+pub fn search(query: &Query) -> io::Result {
+  
   let start = Instant::now();
-
+  let index = &*INDEX;
+  
   let mut intermediate: Vec<(f32, &Item)> = index
     .items
     .par_iter()
@@ -482,24 +487,8 @@ pub fn search(index: &Index, query: &Query) -> io::Result {
   }
 }
 
-fn main(){
-  use std::fs;
-  use std::io::prelude::*;
-  let dir = format!("{}", std::env::current_dir().unwrap().display());
-  let logfilepath = format!("{}/log.txt", dir);
-
-  let mut logfile = fs::OpenOptions::new()
-    .create(true)
-    .append(true)
-    .open(logfilepath)
-    .unwrap();
-  let mut log = |message: String| {
-    let st = format!("{}\n", message);
-    logfile.write_all(st.as_bytes()).unwrap();
-  };
-  let ts;
-
-  let index = {
+lazy_static! {
+  static ref INDEX: Index = {      
     let client = Client::with_uri_str("mongodb://localhost:27017").unwrap();
     let db = client.database("openradio-2");
     let coll = db.collection("stations");
@@ -524,23 +513,32 @@ fn main(){
       .sort(sort)
       .build();
     let cursor = coll.find(filter, opts).unwrap();
-
-    ts = Instant::now();
-    //let index = Index::from_cursor(cursor);
-    //*Arc::get_mut(&mut index).unwrap() = Some(idx);
     let idx = Index::from_cursor(cursor);
-    /*
-    let start_message = format!(
-      "[RS] search ready {} documents, index created in {}ms",
-      idx.items.len(),
-      ts.elapsed().as_millis()
-    );
-    println!("{}", start_message);
-    log(start_message);
-    */
-    Arc::new(RwLock::new(idx))
+    
+    idx
   };
-  let istty = atty::is(atty::Stream::Stdin);
+}
+
+fn main(){
+  /*
+  use std::fs;
+  use std::io::prelude::*;
+  let dir = format!("{}", std::env::current_dir().unwrap().display());
+  let logfilepath = format!("{}/log.txt", dir);
+
+  let mut logfile = fs::OpenOptions::new()
+    .create(true)
+    .append(true)
+    .open(logfilepath)
+    .unwrap();
+  let mut log = |message: String| {
+    let st = format!("{}\n", message);
+    logfile.write_all(st.as_bytes()).unwrap();
+  };
+  let ts;
+  */
+    
+  //let istty = atty::is(atty::Stream::Stdin);
 
   /*
   if istty {
@@ -574,17 +572,19 @@ fn main(){
     use std::thread::{sleep, spawn};
     use std::time::Duration;
 
+    let _index = &*INDEX;
+
     let server = spawn(move || {
+      // load index
+
       ws::listen("127.0.0.1:3000", |out| {
-        //println!("client connected");
-        let inner = Arc::clone(&index);
         move |msg| {
           if let ws::Message::Text(message_string) = msg {
             match serde_json::from_str::<io::QueryMessage>(message_string.as_str()) {
               Ok(query_message) => {
                 let query = Query::from_io(&query_message.query);
-                let idx = &*inner.read().unwrap();
-                let result = search(&idx, &query);
+                //let idx = &*inner.read().unwrap();
+                let result = search(&query);
                 let response = ws::Message::Text(
                   serde_json::to_string(
                     &io::Out{replyTo: query_message.id, result}
@@ -593,10 +593,7 @@ fn main(){
                 out.send(response)?;
               }
               Err(e) => eprintln!("error deserializing json {}", e)
-            } 
-            //println!("server got message: {:?}", msg);
-            
-            //out.send(msg).unwrap();
+            }
           }
           Ok(())
         }
