@@ -322,7 +322,7 @@ exports.attach = async (app) => {
     });
     api.get("/signal/:tt/:f", async (req, res) => {
         const type = req.params.tt;
-        const frec = parseFloat(req.params.frec);
+        const frec = parseFloat(req.params.f);
         const countryCode = req.query.countryCode || null;
         const paging = exports.getRequestPaging(req);
         const json = await exports.signal(type, frec, countryCode, paging);

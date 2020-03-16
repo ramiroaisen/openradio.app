@@ -14,15 +14,13 @@ exports.getCollection = conn_1.collectionGetter("stations");
     coll.createIndex({ "signal.type": 1 });
     coll.createIndex({ "signal.frec": 1 });
     coll.createIndex({ "signal.type": 1, "signal.frec": 1 });
-    coll.createIndex({ origin: 1 });
 })();
 exports.stationListProject = {
     _id: 1,
     name: 1,
     slug: 1,
-    countryCode: 1,
-    origin: 1,
-    "mt.img": 1
+    //img: 1,
+    countryCode: 1
 };
 exports.stationProject = {
     _id: 1,
@@ -45,8 +43,6 @@ exports.stationProject = {
     signal: 1,
     votes: 1,
     programming: 1,
-    order: 1,
-    origin: 1,
-    mt: 1
+    order: 1
 };
 //# sourceMappingURL=Station.js.map
