@@ -11,6 +11,8 @@ let _uid = 0;
 exports.uid = () => ++_uid;
 exports.getSearcher = async () => {
     const child = child_process_1.spawn(exports.bin);
+    child.stdout.pipe(process.stdout);
+    child.stderr.pipe(process.stderr);
     const resolvers = new Map();
     // await for the first data (process ready)
     const start = Date.now();

@@ -52,6 +52,9 @@ export const getSearcher = async () => {
 
   const child = spawn(bin);
 
+  child.stdout.pipe(process.stdout);
+  child.stderr.pipe(process.stderr);
+
   const resolvers = new Map<number, Awaiter>();
 
   // await for the first data (process ready)
