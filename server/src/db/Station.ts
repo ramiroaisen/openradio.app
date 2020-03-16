@@ -16,6 +16,7 @@ export const getCollection = collectionGetter<Station>("stations");
   coll.createIndex({"signal.type": 1});
   coll.createIndex({"signal.frec": 1});
   coll.createIndex({"signal.type": 1, "signal.frec": 1});
+  coll.createIndex({origin: 1});
 })()
 
 export type Station = {
@@ -29,8 +30,8 @@ export type Station = {
   //alt: string
   slogan?: string | null
   desc?: string | null
-  search: string
-  address: string
+  search?: string
+  address?: string
 
   web?: string | null
   facebook?: string | null
@@ -60,6 +61,17 @@ export type Station = {
   streams: Stream[],
 
   programming?: Programming | null
+
+  origin: "rw" | "mt" | "both"
+
+  mt?: {
+    img: {
+      lt: string
+      gt: string
+    },
+    desc: string
+    signals: Signal[]
+  }
 }
 
 export type Stream = {
@@ -92,8 +104,9 @@ export const stationListProject = {
   _id: 1,
   name: 1,
   slug: 1,
-  //img: 1,
-  countryCode: 1
+  countryCode: 1,
+  origin: 1,
+  "mt.img": 1
 }
 
 export const stationProject = {
@@ -125,5 +138,8 @@ export const stationProject = {
 
   programming: 1,
 
-  order: 1
+  order: 1,
+
+  origin: 1,
+  mt: 1
 }

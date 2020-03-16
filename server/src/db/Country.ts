@@ -21,4 +21,5 @@ export type Country = {
   count: number
   amCount: number
   fmCount: number
+  origin: "rw" | "mt" | "both"
 }
