@@ -199,13 +199,26 @@ impl Index {
   }
 
   pub fn from_cursor(cursor: mongodb::Cursor) -> Self {
-    let items = cursor
+    /*let items = cursor
       .map(|it| {
         let bson_doc = bson::Bson::from(it.unwrap());
         let doc: Doc = bson::from_bson(bson_doc).unwrap();
         Item::from_doc(doc)
       })
       .collect::<Vec<Item>>();
+    */
+
+    let items = cursor
+      .collect::<Vec<Result<bson::Document, _>>>()
+      .into_par_iter()
+      .map(|res| {
+        let it = res.unwrap();
+        let bson_doc = bson::Bson::from(it);
+        let doc: Doc = bson::from_bson(bson_doc).unwrap();
+        Item::from_doc(doc)
+      })
+      .collect::<Vec<Item>>();
+
 
     Self { items }
   }
@@ -527,6 +540,7 @@ fn main(){
   };
   let istty = atty::is(atty::Stream::Stdin);
 
+  /*
   if istty {
     loop {
       let arc = index.clone();
@@ -553,6 +567,7 @@ fn main(){
       }
     }
   } else {
+  */
 
     use std::thread::{sleep, spawn};
     use std::time::Duration;
@@ -591,5 +606,5 @@ fn main(){
     print!("127.0.0.1:3000");
 
     server.join().unwrap();
-  }
+  //}
 }
