@@ -366,7 +366,7 @@ export const attach = async (app: Application) => {
 
   api.get("/signal/:tt/:f", async (req, res) => {
     const type = req.params.tt as "am" | "fm";
-    const frec = parseFloat(req.params.frec);
+    const frec = parseFloat(req.params.f);
     const countryCode = req.query.countryCode || null;
     const paging = getRequestPaging(req);
     const json = await signal(type, frec, countryCode, paging);
