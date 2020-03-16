@@ -529,6 +529,7 @@ fn main(){
     //let index = Index::from_cursor(cursor);
     //*Arc::get_mut(&mut index).unwrap() = Some(idx);
     let idx = Index::from_cursor(cursor);
+    /*
     let start_message = format!(
       "[RS] search ready {} documents, index created in {}ms",
       idx.items.len(),
@@ -536,6 +537,7 @@ fn main(){
     );
     println!("{}", start_message);
     log(start_message);
+    */
     Arc::new(RwLock::new(idx))
   };
   let istty = atty::is(atty::Stream::Stdin);
@@ -603,7 +605,7 @@ fn main(){
 
     sleep(Duration::from_millis(50));
   
-    print!("127.0.0.1:3000");
+    println!("127.0.0.1:3000");
 
     server.join().unwrap();
   //}
