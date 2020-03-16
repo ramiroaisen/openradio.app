@@ -1,0 +1,27 @@
+[package]
+name = "neon-search"
+version = "0.1.0"
+authors = ["Ramiro <ramiroaisen@gmail.com>"]
+license = "MIT"
+build = "build.rs"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "neon_search"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.3.3"
+
+[dependencies]
+neon = "*"
+neon-serde = "*"
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
+lazy_static = "*"
+unidecode = "*"
+mongodb = "*"
+bson = "*"
+math = "*"
+rayon = "*"

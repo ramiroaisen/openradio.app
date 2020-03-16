@@ -1,8 +1,10 @@
 import { basedir } from "./config";
-import { spawn } from "child_process";
-import Ws from "ws";
+//import { spawn } from "child_process";
+//import Ws from "ws";
 
-export const bin = `${basedir}/rs/target/release/openradio-search`;
+//export const bin = `${basedir}/rs/target/release/openradio-search`;
+
+const {search, start} = require("../../neon-search/lib") as any;
 
 export type Query = {
   q: string
@@ -45,6 +47,12 @@ export type SearchResult = {
 
 export type Awaiter = (result: SearchResult) => void;
 
+export const getSearcher = async () => {
+  start();
+  return {search};
+}
+
+/*
 let _uid = 0;
 export const uid = () => ++_uid;
 
@@ -59,30 +67,6 @@ export const getSearcher = async () => {
 
   // await for the first data (process ready)
   const start = Date.now();
-  /*
-  // One conn per search (fail)
-  await new Promise<Ws>(resolve => child.stdout.once("data", async url => {
-    console.log("[search] index created in ", Date.now() - start, "ms")
-    resolve();
-  }))
-  
-  const search = (query: Query) => new Promise<SearchResult>(async resolve => {
-    const start = Date.now();
-    const id = uid();
-    const out: Out = { id, query };
-    const client = new Ws("ws://127.0.0.1:3000");
-    client.once("open", () => {
-      client.once("message", (data) => {
-        client.close();
-        const result = JSON.parse(data.toString()).result;
-        resolve(result)
-        const ms = Date.now() - start;
-        console.log(`[search]: ${JSON.stringify(query)}: ${result.paging.total} in ${ms}ms`);
-      })
-      client.send(JSON.stringify(out))
-    })
-  })*/
-
   const clientp = new Promise<Ws>(resolve => child.stdout.once("data", async url => {
 
     console.log(`[search] index created in ${Date.now() - start}ms`);
@@ -131,3 +115,4 @@ export const getSearcher = async () => {
 
   return { search };
 }
+*/
