@@ -1,6 +1,6 @@
 import * as Country from "../db/Country";
 import * as Station from "../db/Station";
-import { langCodes, defaultLang } from "../i18n/i18n";
+import { langCodes, defaultLang, isLangCode } from "../i18n/i18n";
 import fs from "fs";
 import fetch from "node-fetch";
 import chalk from "chalk";
@@ -49,7 +49,7 @@ export const generateSitemap = async (baseUrl: string) => {
   // /[lang]
   // /es
   entries.push({
-    loc: "/",
+    loc: "/en",
     alternates: [
       ...langCodes.map(ll => ({ href: `/${ll}`, lang: ll })),
       { href: `/`, lang: "x-default" }
@@ -58,7 +58,7 @@ export const generateSitemap = async (baseUrl: string) => {
 
   const add = (from: string) => {
     entries.push({
-      loc: from,
+      loc: "/en" + from,
       alternates: [
         ...langCodes.map(ll => ({ href: `/${ll}${from}`, lang: ll })),
         { href: from, lang: `x-default` }
@@ -71,12 +71,15 @@ export const generateSitemap = async (baseUrl: string) => {
   add("/radio-am");
   add("/radio-fm");
 
+  const ccll = (ll: string) => isLangCode(ll) ? ll : "en";
+
   // /:ll-:cc
   // /es-ar
   for (const country of countries) {
+    const ll = ccll(country.lang);
     const cc = country.code;
     entries.push({
-      loc: `/xx-${cc}`,
+      loc: `/${ll}-${cc}`,
       alternates: [
         ...langCodes.map(ll => ({ href: `/${ll}-${cc}`, lang: `${ll}-${cc}` })),
         { href: `/xx-${cc}`, lang: "x-default" }
@@ -87,12 +90,13 @@ export const generateSitemap = async (baseUrl: string) => {
   // :ll-:cc/radio/:s
   // /es-ar/radio/mega
   for (const country of countries) {
+    const ll = ccll(country.lang);
     const cc = country.code;
     let stations = await stationsColl.find({ countryCode: cc }).sort({ order: 1 }).project({ slug: 1 }).toArray();
     for (const station of stations) {
       const s = station.slug;
       entries.push({
-        loc: `/xx-${cc}/radio/${s}`,
+        loc: `/${ll}-${cc}/radio/${s}`,
         alternates: [
           ...langCodes.map(ll => ({ href: `/${ll}-${cc}/radio/${s}`, lang: `${ll}-${cc}` })),
           { href: `/xx-${cc}/radio/${s}`, lang: "x-default" }
@@ -118,6 +122,7 @@ export const generateSitemap = async (baseUrl: string) => {
 
   for(const tt of ["am", "fm"]){
     for(const country of countries){
+      const ll = ccll(country.lang);
       const cc = country.code;
       const has = !!(tt === "am" ? country.amCount : country.fmCount);
       if(!has)
@@ -127,7 +132,7 @@ export const generateSitemap = async (baseUrl: string) => {
       // /es-ar/radio-am
       // /es-ar/radio-fm
       entries.push({
-        loc: `/xx-${cc}/radio-${tt}`,
+        loc: `/${ll}-${cc}/radio-${tt}`,
         alternates: [
           ...langCodes.map(ll => ({href: `/${ll}-${cc}/radio-${tt}`, lang: `${ll}-${cc}`})),
           { href: `/xx-${cc}/radio-${tt}`, lang: "x-default" }
@@ -141,7 +146,7 @@ export const generateSitemap = async (baseUrl: string) => {
         // /es-ar/radio-am/1100
         // /es-ar/radio-fm/98.3
         entries.push({
-          loc: `/xx-${cc}/radio-${tt}/${f}`,
+          loc: `/${ll}-${cc}/radio-${tt}/${f}`,
           alternates: [
             ...langCodes.map(ll => ({ href: `/${ll}-${cc}/radio-${tt}/${f}`, lang: `${ll}-${cc}`})),
             { href: `/xx-${cc}/radio-${tt}/${s}`, lang: "x-default" }
