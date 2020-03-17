@@ -49,4 +49,27 @@ exports.stationProject = {
     origin: 1,
     mt: 1
 };
+exports.signal = async (type, frec, countryCode) => {
+    const coll = await exports.getCollection();
+    const filter = { ["signalCache." + type]: frec };
+    if (countryCode != null)
+        filter.countryCode = countryCode;
+    return coll.find(filter).project(exports.stationListProject);
+};
+exports.signalList = async (type, countryCode) => {
+    const coll = await exports.getCollection();
+    const filter = countryCode ? { countryCode } : {};
+    const list = await coll.distinct("signalCache." + type, filter);
+    list.sort((a, b) => a - b);
+    return list;
+};
+exports.countryIndex = async (countryCode) => {
+    const coll = await exports.getCollection();
+    return coll.find({ countryCode }).project(exports.stationListProject);
+};
+exports.getStation = async (countryCode, slug) => {
+    const coll = await exports.getCollection();
+    const cursor = coll.find({ countryCode, slug }).project(exports.stationProject).limit(1);
+    return await cursor.next();
+};
 //# sourceMappingURL=Station.js.map

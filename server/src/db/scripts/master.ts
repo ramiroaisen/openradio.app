@@ -3,7 +3,7 @@ import {concurrent} from "conqurrent";
 import {spawn, Worker} from "threads";
 import {WorkerT} from "./worker";
 import {getCollection as getCountries} from "../Country";
-import { updateCountries } from "../../api";
+//import { updateCountries } from "../../api";
 
 const filename = (station: Station): string => {
   return `/home/ramiro/Dev/mytuner/site/stations/${station.slug}.html`

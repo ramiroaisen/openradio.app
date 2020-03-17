@@ -1,5 +1,5 @@
 import { collectionGetter } from "./conn";
-import { ObjectId } from "mongodb";
+import { ObjectId, FilterQuery, Cursor } from "mongodb";
 import { City } from "./City";
 
 export const getCollection = collectionGetter<Station>("stations");
@@ -72,6 +72,11 @@ export type Station = {
     desc: string
     signals: Signal[]
   }
+
+  signalCache: {
+    am: number[]
+    fm: number[]
+  }
 }
 
 export type Stream = {
@@ -142,4 +147,31 @@ export const stationProject = {
 
   origin: 1,
   mt: 1
+}
+
+export const signal = async (type: "am" | "fm", frec: number, countryCode?: string | null) => {
+  const coll = await getCollection();
+  const filter: FilterQuery<Station> = {["signalCache." + type]: frec};
+  if(countryCode != null)
+    filter.countryCode = countryCode;
+  return coll.find(filter).project(stationListProject);
+}
+
+export const signalList = async (type: "am" | "fm", countryCode?: string | null): Promise<number[]> => {
+  const coll = await getCollection();
+  const filter: FilterQuery<Station> = countryCode ? {countryCode} : {};
+  const list = await coll.distinct("signalCache." + type, filter);
+  list.sort((a: number, b: number) => a - b);
+  return list;
+}
+
+export const countryIndex = async (countryCode: string) => {
+  const coll = await getCollection();
+  return coll.find({countryCode}).project(stationListProject);
+}
+
+export const getStation = async (countryCode: string, slug: string) => {
+  const coll = await getCollection();
+  const cursor = coll.find({countryCode, slug}).project(stationProject).limit(1);
+  return await cursor.next();
 }

@@ -1,3 +1,4 @@
+/*
 import { connect } from "mongodb"
 import { getCollection } from "../Country";
 import { Station, getCollection as getStations } from "../Station";
@@ -81,6 +82,4 @@ const main = async () => {
   const res = await stations.updateMany({}, {$set: {origin: "rw"}});
   console.log(res.modifiedCount, "stations modified");
   */
-}
-
-main();
+//}
