@@ -14,6 +14,8 @@ exports.getCollection = conn_1.collectionGetter("stations");
     coll.createIndex({ "signal.type": 1 });
     coll.createIndex({ "signal.frec": 1 });
     coll.createIndex({ "signal.type": 1, "signal.frec": 1 });
+    coll.createIndex({ "signalCache.am": 1 });
+    coll.createIndex({ "signalCache.fm": 1 });
     coll.createIndex({ origin: 1 });
 })();
 exports.stationListProject = {

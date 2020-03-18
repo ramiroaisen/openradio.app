@@ -29,6 +29,7 @@ const api = __importStar(require("./api"));
 const i18n_1 = require("./i18n/i18n");
 const proxy = __importStar(require("./proxy"));
 const Country_1 = require("./db/Country");
+const isbot_1 = __importDefault(require("isbot"));
 //const redirects = require("./redirects");
 exports.start = async (sapper) => {
     const { PORT, NODE_ENV } = process.env;
@@ -38,6 +39,15 @@ exports.start = async (sapper) => {
     if (config.env === "prod") {
         app.use(morgan_1.default("dev"));
     }
+    app.use((req, res, next) => {
+        const ua = req.headers["user-agent"];
+        if (typeof ua === "string") {
+            if (isbot_1.default(ua)) {
+                console.log(`BOT: ${req.headers["user-agent"]}`);
+            }
+        }
+        next();
+    });
     app // You can also use Express
         .use(compression_1.default({ threshold: 0 }), helmet_1.default(), 
     //sirv('static/static/imm', { dev: false, maxAge: 31536000, immutable: true }),

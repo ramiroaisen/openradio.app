@@ -36,6 +36,7 @@
     "helmet": "^3.21.3",
     "i18n-iso-countries": "^4.3.1",
     "i18n-week-days": "0.0.3",
+    "isbot": "^2.5.7",
     "iso-639-1": "^2.1.0",
     "mongodb": "^3.5.5",
     "morgan": "^1.9.1",

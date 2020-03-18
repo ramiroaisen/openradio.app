@@ -28,6 +28,8 @@ import {i18n} from "./i18n/i18n";
 import * as proxy from "./proxy";
 import { getCollection } from "./db/Country";
 
+import isBot from "isbot";
+
 //const redirects = require("./redirects");
 
 export const start = async (sapper: any) => {
@@ -40,6 +42,16 @@ export const start = async (sapper: any) => {
   if(config.env === "prod"){
     app.use(morgan("dev"));
   }
+
+  app.use((req, res, next) => {
+    const ua = req.headers["user-agent"];
+    if(typeof ua === "string"){
+      if(isBot(ua)){
+        console.log(`BOT: ${req.headers["user-agent"]}`)
+      }
+    }
+    next();
+  })
 
   app // You can also use Express
     .use(
