@@ -66,14 +66,18 @@
   export let input = void 0;
 
   export function submit(){
-    value.trim() && go(searchUrl({lang: $lang, q: value.trim(), countryCode: $countryCode }));
+    // Remove Country limited search
+    // value.trim() && go(searchUrl({lang: $lang, q: value.trim(), countryCode: $countryCode }));
+    value.trim() && go(searchUrl({lang: $lang, q: value.trim() }));
   }
 
-  $: action = searchActionUrl({lang: $lang, countryCode: $countryCode});
-  
-  $: placeholder = $countryCode ? 
-    $trans("search.placeholder.country", {country: $trans(`countries.${$countryCode}`)}) : 
-    $trans("search.placeholder.global");
+  // Remove country limited search
+  // $: action = searchActionUrl({lang: $lang, countryCode: $countryCode});
+  $: action = searchActionUrl({lang: $lang});
+
+  // Remove country limited search
+  // $: placeholder = $countryCode ? $trans("search.placeholder.country", {country: $trans(`countries.${$countryCode}`)}) : $trans("search.placeholder.global");
+  $: placeholder = $trans("search.placeholder.global");
 </script>
 
 <form class="search" method="get" {action} on:submit|preventDefault={submit}>

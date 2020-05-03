@@ -4,9 +4,6 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var fs = _interopDefault(require('fs'));
 var path = _interopDefault(require('path'));
-var format = _interopDefault(require('string-format'));
-var get = _interopDefault(require('get-value'));
-require('svelte-layout-aware-transitions');
 var Stream = _interopDefault(require('stream'));
 var http = _interopDefault(require('http'));
 var Url = _interopDefault(require('url'));
@@ -277,6 +274,227 @@ function writable(value, start = noop) {
 const CONTEXT_KEY = {};
 
 const preload = () => ({});
+
+var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+var stringFormat = createCommonjsModule(function (module) {
+void function(global) {
+
+  //  ValueError :: String -> Error
+  function ValueError(message) {
+    var err = new Error(message);
+    err.name = 'ValueError';
+    return err;
+  }
+
+  //  create :: Object -> String,*... -> String
+  function create(transformers) {
+    return function(template) {
+      var args = Array.prototype.slice.call(arguments, 1);
+      var idx = 0;
+      var state = 'UNDEFINED';
+
+      return template.replace(
+        /([{}])\1|[{](.*?)(?:!(.+?))?[}]/g,
+        function(match, literal, _key, xf) {
+          if (literal != null) {
+            return literal;
+          }
+          var key = _key;
+          if (key.length > 0) {
+            if (state === 'IMPLICIT') {
+              throw ValueError('cannot switch from ' +
+                               'implicit to explicit numbering');
+            }
+            state = 'EXPLICIT';
+          } else {
+            if (state === 'EXPLICIT') {
+              throw ValueError('cannot switch from ' +
+                               'explicit to implicit numbering');
+            }
+            state = 'IMPLICIT';
+            key = String(idx);
+            idx += 1;
+          }
+
+          //  1.  Split the key into a lookup path.
+          //  2.  If the first path component is not an index, prepend '0'.
+          //  3.  Reduce the lookup path to a single result. If the lookup
+          //      succeeds the result is a singleton array containing the
+          //      value at the lookup path; otherwise the result is [].
+          //  4.  Unwrap the result by reducing with '' as the default value.
+          var path = key.split('.');
+          var value = (/^\d+$/.test(path[0]) ? path : ['0'].concat(path))
+            .reduce(function(maybe, key) {
+              return maybe.reduce(function(_, x) {
+                return x != null && key in Object(x) ?
+                  [typeof x[key] === 'function' ? x[key]() : x[key]] :
+                  [];
+              }, []);
+            }, [args])
+            .reduce(function(_, x) { return x; }, '');
+
+          if (xf == null) {
+            return value;
+          } else if (Object.prototype.hasOwnProperty.call(transformers, xf)) {
+            return transformers[xf](value);
+          } else {
+            throw ValueError('no transformer named "' + xf + '"');
+          }
+        }
+      );
+    };
+  }
+
+  //  format :: String,*... -> String
+  var format = create({});
+
+  //  format.create :: Object -> String,*... -> String
+  format.create = create;
+
+  //  format.extend :: Object,Object -> ()
+  format.extend = function(prototype, transformers) {
+    var $format = create(transformers);
+    prototype.format = function() {
+      var args = Array.prototype.slice.call(arguments);
+      args.unshift(this);
+      return $format.apply(global, args);
+    };
+  };
+
+  /* istanbul ignore else */
+  {
+    module.exports = format;
+  }
+
+}.call(commonjsGlobal, commonjsGlobal);
+});
+
+/*!
+ * isobject <https://github.com/jonschlinkert/isobject>
+ *
+ * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+var isobject = function isObject(val) {
+  return val != null && typeof val === 'object' && Array.isArray(val) === false;
+};
+
+/*!
+ * get-value <https://github.com/jonschlinkert/get-value>
+ *
+ * Copyright (c) 2014-2018, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+
+
+var getValue = function(target, path, options) {
+  if (!isobject(options)) {
+    options = { default: options };
+  }
+
+  if (!isValidObject(target)) {
+    return typeof options.default !== 'undefined' ? options.default : target;
+  }
+
+  if (typeof path === 'number') {
+    path = String(path);
+  }
+
+  const isArray = Array.isArray(path);
+  const isString = typeof path === 'string';
+  const splitChar = options.separator || '.';
+  const joinChar = options.joinChar || (typeof splitChar === 'string' ? splitChar : '.');
+
+  if (!isString && !isArray) {
+    return target;
+  }
+
+  if (isString && path in target) {
+    return isValid(path, target, options) ? target[path] : options.default;
+  }
+
+  let segs = isArray ? path : split(path, splitChar, options);
+  let len = segs.length;
+  let idx = 0;
+
+  do {
+    let prop = segs[idx];
+    if (typeof prop === 'number') {
+      prop = String(prop);
+    }
+
+    while (prop && prop.slice(-1) === '\\') {
+      prop = join([prop.slice(0, -1), segs[++idx] || ''], joinChar, options);
+    }
+
+    if (prop in target) {
+      if (!isValid(prop, target, options)) {
+        return options.default;
+      }
+
+      target = target[prop];
+    } else {
+      let hasProp = false;
+      let n = idx + 1;
+
+      while (n < len) {
+        prop = join([prop, segs[n++]], joinChar, options);
+
+        if ((hasProp = prop in target)) {
+          if (!isValid(prop, target, options)) {
+            return options.default;
+          }
+
+          target = target[prop];
+          idx = n - 1;
+          break;
+        }
+      }
+
+      if (!hasProp) {
+        return options.default;
+      }
+    }
+  } while (++idx < len && isValidObject(target));
+
+  if (idx === len) {
+    return target;
+  }
+
+  return options.default;
+};
+
+function join(segs, joinChar, options) {
+  if (typeof options.join === 'function') {
+    return options.join(segs);
+  }
+  return segs[0] + joinChar + segs[1];
+}
+
+function split(path, splitChar, options) {
+  if (typeof options.split === 'function') {
+    return options.split(path);
+  }
+  return path.split(splitChar);
+}
+
+function isValid(key, target, options) {
+  if (typeof options.isValid === 'function') {
+    return options.isValid(key, target);
+  }
+  return true;
+}
+
+function isValidObject(val) {
+  return isobject(val) || Array.isArray(val) || typeof val === 'function';
+}
 
 var ar = {
 	code: "ar",
@@ -579,7 +797,7 @@ const notFoundKeys = new Set();
 
 const formatter = locale => (key, params = {}) => {
   //console.log(locale.lang, key);
-  const o = get(locale, key);
+  const o = getValue(locale, key);
   
   if(typeof o !== "string"){
     if(!notFoundKeys.has()){
@@ -589,7 +807,7 @@ const formatter = locale => (key, params = {}) => {
     return key;
   }
 
-  return format(o, params);
+  return stringFormat(o, params);
 };
 
 // return always the same stores for the same session
@@ -1207,29 +1425,25 @@ const Search = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 const css$8 = {
 	code: ".search.svelte-ylgfos{display:flex;align-items:center;margin:0;padding:0 0 0 0.75em;background:rgba(255,255,255,0.25);border-radius:100px}.field.svelte-ylgfos{font:inherit;font-size:1.1rem;border:none;padding:0.5em;outline:none;width:100%;border-radius:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:transparent;color:#fff}.field.svelte-ylgfos::placeholder{color:rgba(255,255,255,0.8)}.icon.svelte-ylgfos{display:flex}input[type=search].svelte-ylgfos::-ms-clear,input[type=search].svelte-ylgfos::-ms-reveal{display:none;width:0;height:0}input[type=\"search\"].svelte-ylgfos::-webkit-search-decoration,input[type=\"search\"].svelte-ylgfos::-webkit-search-cancel-button,input[type=\"search\"].svelte-ylgfos::-webkit-search-results-button,input[type=\"search\"].svelte-ylgfos::-webkit-search-results-decoration{display:none}",
-	map: "{\"version\":3,\"file\":\"Search.svelte\",\"sources\":[\"Search.svelte\"],\"sourcesContent\":[\"<style>\\n  .search{\\n    display: flex;\\n    align-items: center;\\n    margin: 0;\\n    padding: 0 0 0 0.75em;\\n    background: rgba(255,255,255,0.25);\\n    border-radius: 100px;\\n  }\\n\\n  .field{\\n    font: inherit;\\n    font-size: 1.1rem;\\n    border: none;\\n    padding: 0.5em;\\n    outline: none;\\n    width: 100%;\\n    border-radius: 2px;\\n    /*box-shadow: rgba(0,0,0,0.15) 0 1px 2px 2px;*/\\n    overflow: hidden;\\n    text-overflow: ellipsis;\\n    white-space: nowrap;\\n\\n\\n    background: transparent;\\n    color: #fff;\\n  }\\n\\n  .field::placeholder{\\n    color: rgba(255,255,255,0.8);\\n  }\\n  \\n  .icon{\\n    display: flex;\\n  }\\n\\n  /* clears the 'X' from Internet Explorer */\\n  input[type=search]::-ms-clear,\\n  input[type=search]::-ms-reveal {\\n    display: none;\\n    width: 0;\\n    height: 0; \\n  }\\n\\n  /* clears the 'X' from Chrome */\\n  input[type=\\\"search\\\"]::-webkit-search-decoration,\\n  input[type=\\\"search\\\"]::-webkit-search-cancel-button,\\n  input[type=\\\"search\\\"]::-webkit-search-results-button,\\n  input[type=\\\"search\\\"]::-webkit-search-results-decoration {\\n    display: none; \\n}\\n</style>\\n\\n<script>\\n  import {goto as go} from \\\"@sapper/app\\\";\\n  import {stores} from \\\"@sapper/app\\\";\\n  const {session, page} = stores();\\n\\n  import Search from \\\"svelte-material-icons-0/dist/Search.svelte\\\";\\n  import {searchUrl, searchActionUrl} from \\\"/Common/urls\\\";\\n\\n  import * as i18n from \\\"/Common/i18n\\\";\\n  const {trans, lang, countryCode} = i18n.stores();\\n\\n  export let value = $page.query.q || \\\"\\\"; \\n  export let input = void 0;\\n\\n  export function submit(){\\n    value.trim() && go(searchUrl({lang: $lang, q: value.trim(), countryCode: $countryCode }));\\n  }\\n\\n  $: action = searchActionUrl({lang: $lang, countryCode: $countryCode});\\n  \\n  $: placeholder = $countryCode ? \\n    $trans(\\\"search.placeholder.country\\\", {country: $trans(`countries.${$countryCode}`)}) : \\n    $trans(\\\"search.placeholder.global\\\");\\n</script>\\n\\n<form class=\\\"search\\\" method=\\\"get\\\" {action} on:submit|preventDefault={submit}>\\n  <div class=\\\"icon\\\">\\n    <Search size=\\\"1.25em\\\"/>\\n  </div>\\n  <input \\n    bind:this={input} \\n    class=\\\"field\\\"\\n    type=\\\"search\\\"\\n    name=\\\"q\\\"\\n    autocomplete=\\\"off\\\"\\n    bind:value\\n    {placeholder}\\n  >\\n</form>\"],\"names\":[],\"mappings\":\"AACE,qBAAO,CAAC,AACN,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,MAAM,CACrB,UAAU,CAAE,KAAK,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,CAClC,aAAa,CAAE,KAAK,AACtB,CAAC,AAED,oBAAM,CAAC,AACL,IAAI,CAAE,OAAO,CACb,SAAS,CAAE,MAAM,CACjB,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,KAAK,CACd,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,IAAI,CACX,aAAa,CAAE,GAAG,CAElB,QAAQ,CAAE,MAAM,CAChB,aAAa,CAAE,QAAQ,CACvB,WAAW,CAAE,MAAM,CAGnB,UAAU,CAAE,WAAW,CACvB,KAAK,CAAE,IAAI,AACb,CAAC,AAED,oBAAM,aAAa,CAAC,AAClB,KAAK,CAAE,KAAK,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,AAC9B,CAAC,AAED,mBAAK,CAAC,AACJ,OAAO,CAAE,IAAI,AACf,CAAC,AAGD,KAAK,CAAC,IAAI,CAAC,MAAM,eAAC,WAAW,CAC7B,KAAK,CAAC,IAAI,CAAC,MAAM,eAAC,YAAY,AAAC,CAAC,AAC9B,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,CAAC,CACR,MAAM,CAAE,CAAC,AACX,CAAC,AAGD,KAAK,CAAC,IAAI,CAAC,QAAQ,eAAC,2BAA2B,CAC/C,KAAK,CAAC,IAAI,CAAC,QAAQ,eAAC,8BAA8B,CAClD,KAAK,CAAC,IAAI,CAAC,QAAQ,eAAC,+BAA+B,CACnD,KAAK,CAAC,IAAI,CAAC,QAAQ,eAAC,mCAAmC,AAAC,CAAC,AACvD,OAAO,CAAE,IAAI,AACjB,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"Search.svelte\",\"sources\":[\"Search.svelte\"],\"sourcesContent\":[\"<style>\\n  .search{\\n    display: flex;\\n    align-items: center;\\n    margin: 0;\\n    padding: 0 0 0 0.75em;\\n    background: rgba(255,255,255,0.25);\\n    border-radius: 100px;\\n  }\\n\\n  .field{\\n    font: inherit;\\n    font-size: 1.1rem;\\n    border: none;\\n    padding: 0.5em;\\n    outline: none;\\n    width: 100%;\\n    border-radius: 2px;\\n    /*box-shadow: rgba(0,0,0,0.15) 0 1px 2px 2px;*/\\n    overflow: hidden;\\n    text-overflow: ellipsis;\\n    white-space: nowrap;\\n\\n\\n    background: transparent;\\n    color: #fff;\\n  }\\n\\n  .field::placeholder{\\n    color: rgba(255,255,255,0.8);\\n  }\\n  \\n  .icon{\\n    display: flex;\\n  }\\n\\n  /* clears the 'X' from Internet Explorer */\\n  input[type=search]::-ms-clear,\\n  input[type=search]::-ms-reveal {\\n    display: none;\\n    width: 0;\\n    height: 0; \\n  }\\n\\n  /* clears the 'X' from Chrome */\\n  input[type=\\\"search\\\"]::-webkit-search-decoration,\\n  input[type=\\\"search\\\"]::-webkit-search-cancel-button,\\n  input[type=\\\"search\\\"]::-webkit-search-results-button,\\n  input[type=\\\"search\\\"]::-webkit-search-results-decoration {\\n    display: none; \\n}\\n</style>\\n\\n<script>\\n  import {goto as go} from \\\"@sapper/app\\\";\\n  import {stores} from \\\"@sapper/app\\\";\\n  const {session, page} = stores();\\n\\n  import Search from \\\"svelte-material-icons-0/dist/Search.svelte\\\";\\n  import {searchUrl, searchActionUrl} from \\\"/Common/urls\\\";\\n\\n  import * as i18n from \\\"/Common/i18n\\\";\\n  const {trans, lang, countryCode} = i18n.stores();\\n\\n  export let value = $page.query.q || \\\"\\\"; \\n  export let input = void 0;\\n\\n  export function submit(){\\n    // Remove Country limited search\\n    // value.trim() && go(searchUrl({lang: $lang, q: value.trim(), countryCode: $countryCode }));\\n    value.trim() && go(searchUrl({lang: $lang, q: value.trim() }));\\n  }\\n\\n  // Remove country limited search\\n  // $: action = searchActionUrl({lang: $lang, countryCode: $countryCode});\\n  $: action = searchActionUrl({lang: $lang});\\n\\n  // Remove country limited search\\n  // $: placeholder = $countryCode ? $trans(\\\"search.placeholder.country\\\", {country: $trans(`countries.${$countryCode}`)}) : $trans(\\\"search.placeholder.global\\\");\\n  $: placeholder = $trans(\\\"search.placeholder.global\\\");\\n</script>\\n\\n<form class=\\\"search\\\" method=\\\"get\\\" {action} on:submit|preventDefault={submit}>\\n  <div class=\\\"icon\\\">\\n    <Search size=\\\"1.25em\\\"/>\\n  </div>\\n  <input \\n    bind:this={input} \\n    class=\\\"field\\\"\\n    type=\\\"search\\\"\\n    name=\\\"q\\\"\\n    autocomplete=\\\"off\\\"\\n    bind:value\\n    {placeholder}\\n  >\\n</form>\"],\"names\":[],\"mappings\":\"AACE,qBAAO,CAAC,AACN,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,MAAM,CACrB,UAAU,CAAE,KAAK,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,CAClC,aAAa,CAAE,KAAK,AACtB,CAAC,AAED,oBAAM,CAAC,AACL,IAAI,CAAE,OAAO,CACb,SAAS,CAAE,MAAM,CACjB,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,KAAK,CACd,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,IAAI,CACX,aAAa,CAAE,GAAG,CAElB,QAAQ,CAAE,MAAM,CAChB,aAAa,CAAE,QAAQ,CACvB,WAAW,CAAE,MAAM,CAGnB,UAAU,CAAE,WAAW,CACvB,KAAK,CAAE,IAAI,AACb,CAAC,AAED,oBAAM,aAAa,CAAC,AAClB,KAAK,CAAE,KAAK,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,AAC9B,CAAC,AAED,mBAAK,CAAC,AACJ,OAAO,CAAE,IAAI,AACf,CAAC,AAGD,KAAK,CAAC,IAAI,CAAC,MAAM,eAAC,WAAW,CAC7B,KAAK,CAAC,IAAI,CAAC,MAAM,eAAC,YAAY,AAAC,CAAC,AAC9B,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,CAAC,CACR,MAAM,CAAE,CAAC,AACX,CAAC,AAGD,KAAK,CAAC,IAAI,CAAC,QAAQ,eAAC,2BAA2B,CAC/C,KAAK,CAAC,IAAI,CAAC,QAAQ,eAAC,8BAA8B,CAClD,KAAK,CAAC,IAAI,CAAC,QAAQ,eAAC,+BAA+B,CACnD,KAAK,CAAC,IAAI,CAAC,QAAQ,eAAC,mCAAmC,AAAC,CAAC,AACvD,OAAO,CAAE,IAAI,AACjB,CAAC\"}"
 };
 
 const Search_1 = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let $page;
 	let $lang;
-	let $countryCode;
 	let $trans;
 	const { session, page } = stores$1$1();
 	$page = get_store_value(page);
 	const { trans, lang, countryCode } = stores();
 	$trans = get_store_value(trans);
 	$lang = get_store_value(lang);
-	$countryCode = get_store_value(countryCode);
 	let { value = $page.query.q || "" } = $$props;
 	let { input = void 0 } = $$props;
 
 	function submit() {
-		value.trim() && goto(searchUrl({
-			lang: $lang,
-			q: value.trim(),
-			countryCode: $countryCode
-		}));
+		// Remove Country limited search
+		// value.trim() && go(searchUrl({lang: $lang, q: value.trim(), countryCode: $countryCode }));
+		value.trim() && goto(searchUrl({ lang: $lang, q: value.trim() }));
 	}
 
 	if ($$props.value === void 0 && $$bindings.value && value !== void 0) $$bindings.value(value);
@@ -1238,15 +1452,9 @@ const Search_1 = create_ssr_component(($$result, $$props, $$bindings, $$slots) =
 	$$result.css.add(css$8);
 	$page = get_store_value(page);
 	$lang = get_store_value(lang);
-	$countryCode = get_store_value(countryCode);
 	$trans = get_store_value(trans);
-	let action = searchActionUrl({ lang: $lang, countryCode: $countryCode });
-
-	let placeholder = $countryCode
-	? $trans("search.placeholder.country", {
-			country: $trans(`countries.${$countryCode}`)
-		})
-	: $trans("search.placeholder.global");
+	let action = searchActionUrl({ lang: $lang });
+	let placeholder = $trans("search.placeholder.global");
 
 	return `<form class="${"search svelte-ylgfos"}" method="${"get"}"${add_attribute("action", action, 0)}>
   <div class="${"icon svelte-ylgfos"}">

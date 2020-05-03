@@ -1,0 +1,70 @@
+{
+  "bundler": "rollup",
+  "shimport": "1.0.1",
+  "assets": {
+    "main": "client.34d0e543.js"
+  },
+  "css": {
+    "main": "main.3894926119.css",
+    "chunks": {
+      "[lang([a-z]{2})]/index.svelte": [
+        "index.0e5a5895.css",
+        "client.34d0e543.css",
+        "Page.17ccbce0.css"
+      ],
+      "[lang([a-z]{2})]/languages.svelte": [
+        "client.34d0e543.css",
+        "Page.17ccbce0.css",
+        "LinkListBox.9f543c17.css"
+      ],
+      "[lang([a-z]{2})]/recents.svelte": [
+        "recents.a2ef7c0d.css",
+        "client.34d0e543.css",
+        "Page.17ccbce0.css",
+        "RadioList.0e3babd3.css"
+      ],
+      "[lang([a-z]{2})]/radio-[signalType(am|fm)]/index.svelte": [
+        "client.34d0e543.css",
+        "Page.17ccbce0.css",
+        "LinkListBox.9f543c17.css"
+      ],
+      "[lang([a-z]{2})]/radio-[signalType(am|fm)]/[signalFrec([0-9]+|[0-9]+.[0-9]+)].svelte": [
+        "client.34d0e543.css",
+        "Page.17ccbce0.css",
+        "RadioList.0e3babd3.css"
+      ],
+      "[lang([a-z]{2})]/search.svelte": [
+        "client.34d0e543.css",
+        "Page.17ccbce0.css",
+        "RadioList.0e3babd3.css",
+        "search.196fea24.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/index.svelte": [
+        "client.34d0e543.css",
+        "Page.17ccbce0.css",
+        "RadioList.0e3babd3.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/radio-[signalType(am|fm)]/index.svelte": [
+        "client.34d0e543.css",
+        "Page.17ccbce0.css",
+        "LinkListBox.9f543c17.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/radio-[signalType(am|fm)]/[signalFrec([0-9]+|[0-9]+.[0-9]+)].svelte": [
+        "client.34d0e543.css",
+        "Page.17ccbce0.css",
+        "RadioList.0e3babd3.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/search.svelte": [
+        "client.34d0e543.css",
+        "Page.17ccbce0.css",
+        "RadioList.0e3babd3.css",
+        "search.196fea24.css"
+      ],
+      "[langCountry([a-z]{2}-[a-z]{2})]/radio/[station].svelte": [
+        "[station].5895255e.css",
+        "client.34d0e543.css",
+        "Page.17ccbce0.css"
+      ]
+    }
+  }
+}

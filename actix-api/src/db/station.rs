@@ -2,8 +2,9 @@ use serde_derive;
 use crate::enum_str;
 use crate::util::serialize_oid;
 use std::collections::BTreeMap as Map;
-
+use lazy_static::lazy_static;
 use mongodb::options::*;
+use bson::ordered::{OrderedDocument as Doc};
 
 pub mod mt{
   #[derive(Serialize, Deserialize)]
@@ -142,8 +143,10 @@ pub struct ListItem {
 
 #[derive(Serialize, Deserialize)]
 pub struct Item {
+  
   #[serde(serialize_with = "serialize_oid")]
   pub _id: bson::oid::ObjectId,
+  
   pub order: u32,
   pub name: String,
   pub slug: String,
@@ -187,7 +190,7 @@ pub struct Item {
   pub mt: Option<mt::Mt>,
 }
 
-pub async fn get(cc: String, ss: String) -> Option<Item>{
+pub async fn get(cc: &String, ss: &String) -> Option<Item> {
   
   let coll = &super::STATIONS;
 
@@ -268,7 +271,7 @@ pub mod query{
   }
 }
 
-pub fn list_projection() -> bson::ordered::OrderedDocument {
+pub fn list_projection() -> Doc {
   doc!{
     "_id": 1,
     "name": 1,
@@ -279,11 +282,11 @@ pub fn list_projection() -> bson::ordered::OrderedDocument {
   }
 }
 
-pub fn list_sort() -> bson::ordered::OrderedDocument {
+pub fn list_sort() -> Doc {
   doc!{"order": 1}
 }
 
-pub async fn paginate(filter: bson::ordered::OrderedDocument,  paging: query::Paging) -> super::Page<ListItem> {
+pub async fn paginate(filter: Doc,  paging: query::Paging) -> super::Page<ListItem> {
   let coll = &super::STATIONS;
   let projection = list_projection();
   let sort = list_sort();

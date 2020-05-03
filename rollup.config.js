@@ -108,7 +108,8 @@ export default {
 			}),
 			commonjs()
 		],
-		external: Object.keys(pkg.dependencies).concat(
+		// Object.keys(pkg.dependencies)
+		external: ["systeminformation"].concat(
 			require('module').builtinModules || Object.keys(process.binding('natives'))
 		),
 

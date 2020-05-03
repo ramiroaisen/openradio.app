@@ -33,6 +33,10 @@ use serde_derive::*;
 
 extern crate tokio;
 
+extern crate env_logger;
+
+use crate::util::response::*;
+
 #[derive(Serialize, Deserialize)]
 pub struct ListQuery {
   countryCode: String,
@@ -40,66 +44,11 @@ pub struct ListQuery {
   pageSize: Option<usize>,
 }
 
-pub async fn default404() -> HttpResponse {
-  HttpResponse::NotFound()
-    .content_type("text/plain")
-    .body("404 Not Found")
-}
-
-pub fn json404() -> HttpResponse {
-  let json = object! {
-    error: {
-      code: 404,
-      message: "Not Found"
-    }
-  };
-  HttpResponse::NotFound()
-    .content_type("application/json")
-    .body(json.dump())
-}
-
-pub fn jsonOk(json: impl serde::Serialize) -> HttpResponse {
-  HttpResponse::Ok()
-    .content_type("application/json")
-    .body(serde_json::to_string(&json).unwrap())
-}
-
 pub async fn list(query: web::Query<db::io::ListQuery>) -> HttpResponse {
   let paging = db::station::query::Paging::new(query.0.page, query.0.pageSize);
   let query = db::station::query::List{ cc: query.0.cc };
   let json = db::station::list(query, paging).await;
   jsonOk(json)
-}
-
-pub async fn station(query: web::Query<db::io::StationQuery>) -> HttpResponse {
-  let station = db::station::get(query.0.cc, query.0.ss).await;
-  match station {
-    Some(station) => jsonOk(station),
-    None => json404()
-  }
-}
-
-extern crate serde_qs;
-pub struct SignalGuard {}
-impl Guard for SignalGuard {
-  fn check(&self, head: &RequestHead) -> bool {
-    let query = match head.uri.query() {
-      Some(q) => q,
-      None => return false,
-    };
-
-    let query = match serde_qs::from_str::<db::io::SignalQuery>(&query) {
-      Ok(query) => query,
-      Err(_) => return false,
-    };
-    if let Some(cc) = query.cc {
-      if cc.len() != 2 {
-        return false;
-      }
-    }
-
-    true
-  }
 }
 
 pub async fn signal(query: web::Query<db::io::SignalQuery>) -> HttpResponse {
@@ -121,12 +70,20 @@ pub async fn frequency_list(query: web::Query<db::io::FrequencyListQuery>) -> Ht
   jsonOk(db::station::frequency_list(query.0.cc, query.0.tt).await)
 }
 
-extern crate env_logger;
+pub async fn station(params: web::Path<(String, String)>) -> HttpResponse {
+  let item = db::station::get(&params.0, &params.1).await;
+  match item {
+    Some(item) => jsonOk(item),
+    None => json404()
+  }
+}
 
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
+  
   use actix_web::middleware::Logger;
-  //std::env::set_var("RUST_LOG", "actix_web=debug");
+  std::env::set_var("RUST_LOG", "actix_web=debug");
+  
   env_logger::init();
 
   let server = HttpServer::new(|| {
@@ -136,7 +93,7 @@ async fn main() -> std::io::Result<()> {
         web::scope("/api")
           .route("/stations", web::get().to(list))
           .route("/signal", web::get().to(signal))
-          .route("/frequency-list", web::get().to(frequency_list))
+          .route("/stations/{cc}/{ss}", web::get().to(station))
           .default_service(web::route().to(json404)),
       )
       .default_service(web::route().to(default404))
