@@ -1,5 +1,5 @@
 import { Country } from "../db/Country";
-import { Locale } from "../i18n/Locale";
+import { Locale } from "../i18n/v2/Locale";
 
 declare global {
   namespace Express {

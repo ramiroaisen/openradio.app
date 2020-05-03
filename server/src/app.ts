@@ -23,7 +23,7 @@ import * as redirects from "./redirects";
 import * as api from "./api";
 
 //const i18n = require("./i18n/server");
-import {i18n} from "./i18n/i18n";
+import {i18n} from "./i18n/v2/i18n";
 
 import * as proxy from "./proxy";
 import { getCollection } from "./db/Country";

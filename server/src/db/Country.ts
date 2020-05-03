@@ -1,6 +1,6 @@
 import { collectionGetter } from "./conn";
 import { ObjectId } from "mongodb";
-import { LangCode } from "../i18n/i18n";
+import { LangCode } from "../i18n/v2/Locale";
 
 export const getCollection = collectionGetter<Country>("countries");
 

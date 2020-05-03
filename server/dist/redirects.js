@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const i18n_1 = require("./i18n/i18n");
+const i18n_1 = require("./i18n/v2/i18n");
 const Country_1 = require("./db/Country");
 const utils_1 = require("./utils");
 exports.attach = async (app) => {

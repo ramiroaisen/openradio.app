@@ -1,6 +1,7 @@
 import * as Country from "../db/Country";
 import * as Station from "../db/Station";
-import { langCodes, defaultLang, isLangCode } from "../i18n/i18n";
+import { langCodes, defaultLang } from "../i18n/v2/Locale";
+import { isLangCode } from "../i18n/v2/i18n";
 import fs from "fs";
 import fetch from "node-fetch";
 import chalk from "chalk";

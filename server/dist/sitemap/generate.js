@@ -12,7 +12,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Country = __importStar(require("../db/Country"));
 const Station = __importStar(require("../db/Station"));
-const i18n_1 = require("../i18n/i18n");
+const Locale_1 = require("../i18n/v2/Locale");
+const i18n_1 = require("../i18n/v2/i18n");
 const fs_1 = __importDefault(require("fs"));
 const node_fetch_1 = __importDefault(require("node-fetch"));
 const chalk_1 = __importDefault(require("chalk"));
@@ -39,7 +40,7 @@ exports.generateSitemap = async (baseUrl) => {
     entries.push({
         loc: "/en",
         alternates: [
-            ...i18n_1.langCodes.map(ll => ({ href: `/${ll}`, lang: ll })),
+            ...Locale_1.langCodes.map(ll => ({ href: `/${ll}`, lang: ll })),
             { href: `/`, lang: "x-default" }
         ]
     });
@@ -47,7 +48,7 @@ exports.generateSitemap = async (baseUrl) => {
         entries.push({
             loc: "/en" + from,
             alternates: [
-                ...i18n_1.langCodes.map(ll => ({ href: `/${ll}${from}`, lang: ll })),
+                ...Locale_1.langCodes.map(ll => ({ href: `/${ll}${from}`, lang: ll })),
                 { href: from, lang: `x-default` }
             ]
         });
@@ -65,7 +66,7 @@ exports.generateSitemap = async (baseUrl) => {
         entries.push({
             loc: `/${ll}-${cc}`,
             alternates: [
-                ...i18n_1.langCodes.map(ll => ({ href: `/${ll}-${cc}`, lang: `${ll}-${cc}` })),
+                ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}`, lang: `${ll}-${cc}` })),
                 { href: `/xx-${cc}`, lang: "x-default" }
             ]
         });
@@ -81,7 +82,7 @@ exports.generateSitemap = async (baseUrl) => {
             entries.push({
                 loc: `/${ll}-${cc}/radio/${s}`,
                 alternates: [
-                    ...i18n_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio/${s}`, lang: `${ll}-${cc}` })),
+                    ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio/${s}`, lang: `${ll}-${cc}` })),
                     { href: `/xx-${cc}/radio/${s}`, lang: "x-default" }
                 ]
             });
@@ -112,7 +113,7 @@ exports.generateSitemap = async (baseUrl) => {
             entries.push({
                 loc: `/${ll}-${cc}/radio-${tt}`,
                 alternates: [
-                    ...i18n_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio-${tt}`, lang: `${ll}-${cc}` })),
+                    ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio-${tt}`, lang: `${ll}-${cc}` })),
                     { href: `/xx-${cc}/radio-${tt}`, lang: "x-default" }
                 ]
             });
@@ -124,7 +125,7 @@ exports.generateSitemap = async (baseUrl) => {
                 entries.push({
                     loc: `/${ll}-${cc}/radio-${tt}/${f}`,
                     alternates: [
-                        ...i18n_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio-${tt}/${f}`, lang: `${ll}-${cc}` })),
+                        ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio-${tt}/${f}`, lang: `${ll}-${cc}` })),
                         { href: `/xx-${cc}/radio-${tt}/${s}`, lang: "x-default" }
                     ]
                 });

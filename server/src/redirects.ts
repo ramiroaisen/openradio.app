@@ -1,5 +1,6 @@
 import { Application, Response, Request, NextFunction } from "express";
-import { isLangCode, getRequestLang, LangCode } from "./i18n/i18n";
+import { isLangCode, getRequestLang } from "./i18n/v2/i18n";
+import { LangCode } from "./i18n/v2/Locale";
 import { getCollection } from "./db/Country";
 import { redirect } from "./utils";
 

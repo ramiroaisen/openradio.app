@@ -66,11 +66,12 @@
   export let input = void 0;
 
   export function submit(){
-    // Remove Country limited search
+    // Remove country limited search
     // value.trim() && go(searchUrl({lang: $lang, q: value.trim(), countryCode: $countryCode }));
     value.trim() && go(searchUrl({lang: $lang, q: value.trim() }));
   }
 
+  let action, placeholder;
   // Remove country limited search
   // $: action = searchActionUrl({lang: $lang, countryCode: $countryCode});
   $: action = searchActionUrl({lang: $lang});
