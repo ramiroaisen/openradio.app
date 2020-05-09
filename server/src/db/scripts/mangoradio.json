@@ -1,0 +1,1472 @@
+{
+  "station": {
+    "name": "MANGORADIO",
+    "slogan": "Wir sind deine Musik!",
+    "logo": "https://mangoradio.de/media/Logo_blue.png",
+    "logo_transparent": "https://mangoradio.de/media/Logo.png",
+    "banner": "https://mangoradio.de/media/Banner_4K.png",
+    "description": "Wir sind MANGORADIO. Wir sind kein ganz gewöhnliches Radio, sondern DEIN Radio. Du kannst mit uns interagieren und auch mitbestimmen, was in unserem Programm läuft. Check doch einfach unsere Webseite unter mangoradio.de aus oder schreib uns eine WhatsApp an +49 39485-694797.",
+    "country": "Germany",
+    "genres": "Dance",
+    "genres_multiple": "Dance, Pop, Charts",
+    "stream": "http://stream.mangoradio.de",
+    "social_link": {
+      "Website": "https://mangoradio.de",
+      "Twitter": "https://twitter.com/mangoradioDE",
+      "Instagram": "https://instagram.com/mangoradioDE",
+      "Facebook": "https://facebook.com/mangoradioDE",
+      "YouTube": "https://www.youtube.com/channel/UCk7MfIaaZbFgBs47sMClV2g",
+      "Twitch": "https://twitch.tv/mangoradioDE",
+      "Telephone": "tel:+4939485694797",
+      "WhatsApp": "https://wa.me/4939485694797",
+      "Mail": "mailto:studio@mangoradio.de",
+      "Discord": "https://discord.gg/aTSpPU8"
+    },
+    "social": {
+      "Website": "https://mangoradio.de",
+      "Twitter": "mangoradioDE",
+      "Instagram": "mangoradioDE",
+      "Facebook": "https://facebook.com/mangoradioDE",
+      "YouTube": "UCk7MfIaaZbFgBs47sMClV2g",
+      "Twitch": "mangoradioDE",
+      "Telephone": "+4939485694797",
+      "WhatsApp": "4939485694797",
+      "Mail": "studio@mangoradio.de",
+      "Discord": "aTSpPU8"
+    },
+    "schedule": {
+      "monday": {
+        "12pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "12am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "default": {
+          "title": "MANGORADIO",
+          "slogan": "Wir sind deine Musik!",
+          "discription": "Die beste Abwechslung für dein Tag!",
+          "logo": "https://mangoradio.de/media/Logo_blue.png",
+          "logo_transparent": "https://mangoradio.de/media/Logo.png",
+          "banner": "https://mangoradio.de/Banner_4K.png"
+        }
+      },
+      "tuesday": {
+        "12pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "12am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "default": {
+          "title": "MANGORADIO",
+          "slogan": "Wir sind deine Musik!",
+          "discription": "Die beste Abwechslung für dein Tag!",
+          "logo": "https://mangoradio.de/media/Logo_blue.png",
+          "logo_transparent": "https://mangoradio.de/media/Logo.png",
+          "banner": "https://mangoradio.de/Banner_4K.png"
+        }
+      },
+      "wednesday": {
+        "12pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "12am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "default": {
+          "title": "MANGORADIO",
+          "slogan": "Wir sind deine Musik!",
+          "discription": "Die beste Abwechslung für dein Tag!",
+          "logo": "https://mangoradio.de/media/Logo_blue.png",
+          "logo_transparent": "https://mangoradio.de/media/Logo.png",
+          "banner": "https://mangoradio.de/Banner_4K.png"
+        }
+      },
+      "thursday": {
+        "12pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "12am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "default": {
+          "title": "MANGORADIO",
+          "slogan": "Wir sind deine Musik!",
+          "discription": "Die beste Abwechslung für dein Tag!",
+          "logo": "https://mangoradio.de/media/Logo_blue.png",
+          "logo_transparent": "https://mangoradio.de/media/Logo.png",
+          "banner": "https://mangoradio.de/Banner_4K.png"
+        }
+      },
+      "friday": {
+        "12pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "12am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "default": {
+          "title": "MANGORADIO",
+          "slogan": "Wir sind deine Musik!",
+          "discription": "Die beste Abwechslung für dein Tag!",
+          "logo": "https://mangoradio.de/media/Logo_blue.png",
+          "logo_transparent": "https://mangoradio.de/media/Logo.png",
+          "banner": "https://mangoradio.de/Banner_4K.png"
+        }
+      },
+      "saturday": {
+        "12pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "12am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "default": {
+          "title": "MANGORADIO",
+          "slogan": "Wir sind deine Musik!",
+          "discription": "Die beste Abwechslung für dein Tag!",
+          "logo": "https://mangoradio.de/media/Logo_blue.png",
+          "logo_transparent": "https://mangoradio.de/media/Logo.png",
+          "banner": "https://mangoradio.de/Banner_4K.png"
+        }
+      },
+      "sunday": {
+        "12pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "12am": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "1pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "2pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "3pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "4pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "5pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "6pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "7pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "8pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "9pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "10pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "11pm": {
+          "title": "",
+          "slogan": "",
+          "discription": "",
+          "logo": "",
+          "logo_transparent": "",
+          "banner": ""
+        },
+        "default": {
+          "title": "MANGORADIO",
+          "slogan": "Wir sind deine Musik!",
+          "discription": "Die beste Abwechslung für dein Tag!",
+          "logo": "https://mangoradio.de/media/Logo_blue.png",
+          "logo_transparent": "https://mangoradio.de/media/Logo.png",
+          "banner": "https://mangoradio.de/Banner_4K.png"
+        }
+      }
+    }
+  },
+  "podcast1": {
+    "name": "KadventsAdlender 2018",
+    "feed": "https://hearthis.at/set/106130-9165494/podcast",
+    "owner": "MANGORADIO",
+    "mail": "management@mangoradio.de"
+  },
+  "podcast2": {
+    "name": "KadventsAdlender 2019",
+    "feed": "https://hearthis.at/set/129196-9165494/podcast",
+    "owner": "MANGORADIO",
+    "mail": "management@mangoradio.de"
+  },
+  "podcast3": {
+    "name": "Let's talk about...",
+    "feed": "https://hearthis.at/set/153388-9165494/podcast",
+    "owner": "MANGORADIO",
+    "mail": "management@mangoradio.de"
+  }
+}

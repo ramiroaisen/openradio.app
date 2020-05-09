@@ -29,11 +29,36 @@ const flat = (locale) => {
     return target;
 };
 const flattedBase = flat(base);
-const size = Object.keys(flattedBase).length;
+const baseSize = Object.keys(flattedBase).length;
 const chalk_1 = __importDefault(require("chalk"));
 for (const [lang, locale] of Object.entries(locales_json_1.default)) {
-    console.log(`> checking locale ${lang} (${locale.lang.code})`);
+    process.stdout.write(`> checking locale ${chalk_1.default.yellow(lang)} (${chalk_1.default.yellow(locale.lang.code)})`);
     const flatted = flat(locale);
-    console.log(`> ${chalk_1.default.yellow(size)} === ${chalk_1.default.yellow(Object.keys(flatted).length)}`);
+    const size = Object.keys(flatted).length;
+    if (size !== baseSize) {
+        process.stdout.write(` => ${chalk_1.default.red("✕")} ${chalk_1.default.red(size)} entries`);
+    }
+    else {
+        process.stdout.write(` => ${chalk_1.default.green("✓")} ${chalk_1.default.yellow(size)} entries`);
+    }
+    process.stdout.write("\n");
+    for (const [key, value] of Object.entries(flattedBase)) {
+        if (typeof value !== "string") {
+            console.log(`> ${chalk_1.default.yellow(`en.${key}`)} is not a string`);
+            continue;
+        }
+        if (!(key in flatted)) {
+            console.log(`> missing entry ${chalk_1.default.yellow(lang + "." + key)}`);
+        }
+    }
+    for (const [key, value] of Object.entries(flatted)) {
+        if (typeof value !== "string") {
+            console.log(`> ${chalk_1.default.yellow(lang + "." + key)} is not a string`);
+            continue;
+        }
+        if (!(key in flattedBase)) {
+            console.log(`> unknown entry ${chalk_1.default.yellow(lang + "." + key)}`);
+        }
+    }
 }
 //# sourceMappingURL=check.js.map

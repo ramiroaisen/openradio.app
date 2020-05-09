@@ -350,7 +350,7 @@
         "signature": "bae2f68957fdf5b0fc10ecae663f8d5c3e33a8f9791a26b631ed01d82855abd9"
       },
       "./src/db/Station.ts": {
-        "version": "8427415f1946c9b616ad1268cdc1d2a34814a4901607826d3bcb9ec0a6ea4f15",
+        "version": "7384d0ae76c3d910aa073d48e5f3d6a0058f43507c7758ba1eb7a264277377d5",
         "signature": "5a0ba952b79c891cc3be3e1f3cf1e7cb7b381a93ac4ede1d09a7d8ce9a9e7cdf"
       },
       "./src/i18n/v2/src/en.ts": {
@@ -477,6 +477,9 @@
         "version": "ba33675cb992d1636f151f2d891d4316e8d4c514268b1f28669201cf19cedd7b",
         "signature": "830c83a3610da6f4bfec412741a01f6302389d95d5ca6722360c731ba2ef37ec"
       },
+      "./src/db/scripts/deletefuzzy.ts": {
+        "version": "cd4cf6b067fce8f203cff0194780660ab0fe49fa4a285340ec6cc67197e1637e"
+      },
       "./src/db/scripts/formatProgramming.ts": {
         "version": "dbd210fc92c1844f96a389e45867a4a2366e665b67c7e5b649db6ac749eeda3a",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
@@ -484,6 +487,12 @@
       "./src/db/scripts/get-signals.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "./src/db/scripts/mangoradio.json": {
+        "version": "801c28da2e56c26d98e7ceb1ea121b599adfd425f744cf776fc8e28f2ecf8583"
+      },
+      "./src/db/scripts/mangoradio.ts": {
+        "version": "5cb1db1a30c5899009ccca25af94d50544d98a3ee8b2396010e1806f7e17bb09"
       },
       "./node_modules/conqurrent/index.d.ts": {
         "version": "ae5d11d5d29c992e222d02d770144341da96e40df65b19e5024fa29df342e197",
@@ -625,6 +634,9 @@
         "version": "9eb302339919123f62deef00e27185de7c61ee120d7a5b49ebfc88b70902dfe7",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
+      "./src/db/scripts/sharp.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
       "./src/db/scripts/signalCache.ts": {
         "version": "edd1570886f74b14537167db4cd247a4a868754ad4a4b1f4c356538b15d5eff9",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
@@ -634,7 +646,7 @@
         "signature": "c824427af4986c2124de29d9fda0071cc043b1a855a0e723fa8ca31d4256c23f"
       },
       "./src/i18n/v2/check.ts": {
-        "version": "b1e1ced3f177e197004c7d297ffdad55d62a04a15d6b7dae1ac5accf03ac5e6b",
+        "version": "b44159a45ed88426f998665197768644406a342266de9c4d859f263a1a2dc487",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "./node_modules/form-data/index.d.ts": {
@@ -1849,6 +1861,12 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
+      "./src/db/scripts/deletefuzzy.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
       "./src/db/scripts/formatProgramming.ts": [
         "./src/db/Station.ts",
         "./node_modules/@types/node/fs.d.ts",
@@ -1857,6 +1875,21 @@
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
       "./src/db/scripts/get-signals.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/db/scripts/mangoradio.json": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/db/scripts/mangoradio.ts": [
+        "./src/db/scripts/mangoradio.json",
+        "./src/db/Station.ts",
+        "./node_modules/@types/mongodb/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -2128,6 +2161,12 @@
         "./src/db/Station.ts",
         "./src/db/City.ts",
         "./node_modules/@types/node/assert.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/db/scripts/sharp.ts": [
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -4007,6 +4046,7 @@
       "./src/i18n/v2/data/weekDays.ts",
       "./src/i18n/v2/data/index.ts",
       "./src/i18n/v2/Locale.ts",
+      "./src/db/Country.ts",
       "./src/db/Genre.ts",
       "./src/utils.ts",
       "./src/db/common.ts",
@@ -4016,6 +4056,7 @@
       "./src/config.ts",
       "./src/search.ts",
       "./node_modules/threads/dist/symbols.d.ts",
+      "./src/api.ts",
       "./node_modules/@types/compression/index.d.ts",
       "./node_modules/@types/morgan/index.d.ts",
       "./node_modules/@types/helmet/index.d.ts",
@@ -4023,12 +4064,17 @@
       "./src/types/geoip-country/index.ts",
       "./node_modules/@types/accept-language-parser/index.d.ts",
       "./src/i18n/v2/locales.json",
+      "./src/i18n/v2/i18n.ts",
+      "./src/redirects.ts",
       "./src/proxy.ts",
       "./node_modules/isbot/index.d.ts",
+      "./src/app.ts",
       "./node_modules/remove-accents/index.d.ts",
       "./src/search-ts.ts",
       "./src/db/scripts/formatProgramming.ts",
       "./src/db/scripts/get-signals.ts",
+      "./src/db/scripts/mangoradio.json",
+      "./src/db/scripts/mangoradio.ts",
       "./node_modules/conqurrent/index.d.ts",
       "./node_modules/threads/dist/serializers.d.ts",
       "./node_modules/threads/dist/common.d.ts",
@@ -4059,6 +4105,7 @@
       "./node_modules/threads/worker.d.ts",
       "./node_modules/@types/cheerio/index.d.ts",
       "./src/db/scripts/worker.ts",
+      "./src/db/scripts/master.ts",
       "./src/db/scripts/mergeCountries.ts",
       "./src/db/scripts/mergeProgramming.ts",
       "./src/db/scripts/mimes.ts",
@@ -4131,15 +4178,11 @@
       "./node_modules/@types/terminal-kit/TextBuffer.d.ts",
       "./node_modules/@types/terminal-kit/Rect.d.ts",
       "./node_modules/@types/terminal-kit/index.d.ts",
-      "./src/types/isbot/index.d.ts",
-      "./src/db/Country.ts",
-      "./src/types/index.ts",
       "./src/sitemap/generate.ts",
-      "./src/db/scripts/master.ts",
-      "./src/app.ts",
-      "./src/redirects.ts",
-      "./src/i18n/v2/i18n.ts",
-      "./src/api.ts"
+      "./src/types/index.ts",
+      "./src/types/isbot/index.d.ts",
+      "./src/db/scripts/deletefuzzy.ts",
+      "./src/db/scripts/sharp.ts"
     ]
   },
   "version": "3.7.5"

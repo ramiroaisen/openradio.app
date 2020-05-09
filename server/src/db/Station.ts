@@ -39,6 +39,17 @@ export type Station = {
   facebook?: string | null
   twitter?: string | null
 
+  // added for mangoradio
+  instagram?: string | null
+  youtube?: string | null
+  discord?: string | null
+  twitch?: string | null
+  whatsApp?: {
+    url: string,
+    text: string
+  } | null
+
+
   mail?: string | null
   tel?: {
     url: string
@@ -132,6 +143,11 @@ export const stationProject = {
   tel: 1,
   facebook: 1,
   twitter: 1,
+  twitch: 1,
+  discord: 1,
+  instagram: 1,
+  youtube: 1,
+  whatsApp: 1,
   address: 1,
   slogan: 1,
 

@@ -142,8 +142,13 @@
   })
 
   const formatWebText = str => str.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
-  const formatFacebookText = str => str.replace(/^https:\/\/www.facebook.com/, "").replace(/\/$/, "");
+  const formatFacebookText = str => str.replace(/https:\/\/(www\.)?facebook.com\//, "").replace(/\/$/, "");
   const formatTwitterText = str => str.replace(/^https:\/\/twitter.com\/(.+)\/?/, "@$1");
+  const formatInstagramText = str => str.replace("https://instagram.com/", "");
+  const formatDiscordText = str => str.replace("https://discord.gg/", "");
+  const formatTwitchText = str => str.replace("https://twitch.tv/", "");
+  const formatYouTubeText = str => str.replace("https://www.youtube.com/", "");
+
 
   const handlePlay = async () => {
     const player = getPlayer();
@@ -266,15 +271,61 @@
           </div>
         {/if}
 
+        {#if station.whatsApp != null}
+          <div class="data-wrap whatsApp">
+            <p><span class="label">WhatsApp:</span> <span class="data"><a href="tel:{station.whatsApp.url}">{station.whatsApp.text}</a></span></p>
+          </div>
+        {/if}
+
         {#if station.facebook != null}
           <div class="data-wrap facebook">
-            <p><span class="label">{$trans("station.labels.facebook")}</span> <span class="data"><a href={station.facebook} rel="noopener nofollow" target="_blank">{formatFacebookText(station.facebook)}</a></span></p>
+            <p><span class="label">Facebook:</span> <span class="data"><a href={station.facebook} rel="noopener nofollow" target="_blank">{formatFacebookText(station.facebook)}</a></span></p>
           </div>
         {/if}
 
         {#if station.twitter != null}
           <div class="data-wrap twitter">
-            <p><span class="label">{$trans("station.labels.twitter")}</span> <span class="data"><a href={station.twitter} rel="noopener nofollow" target="_blank">{formatTwitterText(station.twitter)}</a></span></p>
+            <p><span class="label">Twitter:</span> <span class="data"><a href={station.twitter} rel="noopener nofollow" target="_blank">{formatTwitterText(station.twitter)}</a></span></p>
+          </div>
+        {/if}
+
+        {#if station.instagram != null}
+          <div class="data-wrap instagram">
+            <p><span class="label">Instagram:</span>
+              <span class="data"><a href={station.instagram} rel="noopener nofollow" target="_blank">
+                {formatInstagramText(station.instagram)}
+              </a></span>
+            </p>
+          </div>
+        {/if}
+
+        {#if station.youtube != null}
+          <div class="data-wrap youtube">
+            <p><span class="label">YouTube:</span>
+              <span class="data"><a href={station.youtube} rel="noopener nofollow" target="_blank">
+                {formatYouTubeText(station.youtube)}
+              </a></span>
+            </p>
+          </div>
+        {/if}
+
+        {#if station.discord != null}
+          <div class="data-wrap discord">
+            <p><span class="label">Discord:</span>
+              <span class="data"><a href={station.discord} rel="noopener nofollow" target="_blank">
+                {formatDiscordText(station.discord)}
+              </a></span>
+            </p>
+          </div>
+        {/if}
+
+        {#if station.twitch != null}
+          <div class="data-wrap twitch">
+            <p><span class="label">Twitch:</span>
+              <span class="data"><a href={station.twitch} rel="noopener nofollow" target="_blank">
+                {formatTwitchText(station.twitch)}
+              </a></span>
+            </p>
           </div>
         {/if}
 
