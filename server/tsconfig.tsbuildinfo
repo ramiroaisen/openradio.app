@@ -910,7 +910,7 @@
         "signature": "522c60f6e6fea8c7a6ed6864ce5a7972d66f35d1e9629d3366d5aed33975fe0f"
       },
       "./src/sitemap/generate.ts": {
-        "version": "6c8675fcebcdff85f47e99df38e96560044e72c7c7278a42269e66558bff10a9",
+        "version": "a081a5e4216ba024c801af6c1171c14def3a3494c753323c67e1e775f61ca511",
         "signature": "cf423b1ebcfc074c6eb9966b17b27ff8e5ce1293388691e6ac7155c4058bfa2a"
       },
       "./src/types/index.ts": {
@@ -4071,6 +4071,7 @@
       "./src/app.ts",
       "./node_modules/remove-accents/index.d.ts",
       "./src/search-ts.ts",
+      "./src/db/scripts/deletefuzzy.ts",
       "./src/db/scripts/formatProgramming.ts",
       "./src/db/scripts/get-signals.ts",
       "./src/db/scripts/mangoradio.json",
@@ -4110,6 +4111,7 @@
       "./src/db/scripts/mergeProgramming.ts",
       "./src/db/scripts/mimes.ts",
       "./src/db/scripts/populateSignalCities.ts",
+      "./src/db/scripts/sharp.ts",
       "./src/db/scripts/signalCache.ts",
       "./node_modules/chalk/index.d.ts",
       "./src/i18n/v2/check.ts",
@@ -4178,11 +4180,9 @@
       "./node_modules/@types/terminal-kit/TextBuffer.d.ts",
       "./node_modules/@types/terminal-kit/Rect.d.ts",
       "./node_modules/@types/terminal-kit/index.d.ts",
-      "./src/sitemap/generate.ts",
       "./src/types/index.ts",
       "./src/types/isbot/index.d.ts",
-      "./src/db/scripts/deletefuzzy.ts",
-      "./src/db/scripts/sharp.ts"
+      "./src/sitemap/generate.ts"
     ]
   },
   "version": "3.7.5"

@@ -1895,18 +1895,16 @@ const Dashboard = create_ssr_component(($$result, $$props, $$bindings, $$slots) 
 
 const Alternates = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let $page;
-	let $countryCode;
 	const { page } = stores$1$1();
 	$page = get_store_value(page);
 	const { countryCode } = stores();
-	$countryCode = get_store_value(countryCode);
 	$page = get_store_value(page);
-	$countryCode = get_store_value(countryCode);
 
 	let langs = Object.values(map).map(lang => {
 		return {
 			url: canonical("/" + lang.code + $page.path.slice(3)),
-			lang: lang.code + ($countryCode ? "-" + $countryCode.toUpperCase() : "")
+			//lang: lang.code + ($countryCode ? ("-" + $countryCode.toUpperCase()) : "")
+			lang: lang.code
 		};
 	});
 

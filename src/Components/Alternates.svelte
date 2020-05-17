@@ -11,7 +11,8 @@
   $: langs = Object.values(map).map(lang => {
     return {
       url: canonical("/" + lang.code + $page.path.slice(3)),
-      lang: lang.code + ($countryCode ? ("-" + $countryCode.toUpperCase()) : "") 
+      //lang: lang.code + ($countryCode ? ("-" + $countryCode.toUpperCase()) : "")
+      lang: lang.code
     }
   });
 </script>

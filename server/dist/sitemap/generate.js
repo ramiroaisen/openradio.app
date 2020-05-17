@@ -66,7 +66,7 @@ exports.generateSitemap = async (baseUrl) => {
         entries.push({
             loc: `/${ll}-${cc}`,
             alternates: [
-                ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}`, lang: `${ll}-${cc}` })),
+                ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}`, lang: `${ll}` })),
                 { href: `/xx-${cc}`, lang: "x-default" }
             ]
         });
@@ -82,7 +82,7 @@ exports.generateSitemap = async (baseUrl) => {
             entries.push({
                 loc: `/${ll}-${cc}/radio/${s}`,
                 alternates: [
-                    ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio/${s}`, lang: `${ll}-${cc}` })),
+                    ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio/${s}`, lang: `${ll}` })),
                     { href: `/xx-${cc}/radio/${s}`, lang: "x-default" }
                 ]
             });
@@ -113,7 +113,7 @@ exports.generateSitemap = async (baseUrl) => {
             entries.push({
                 loc: `/${ll}-${cc}/radio-${tt}`,
                 alternates: [
-                    ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio-${tt}`, lang: `${ll}-${cc}` })),
+                    ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio-${tt}`, lang: ll })),
                     { href: `/xx-${cc}/radio-${tt}`, lang: "x-default" }
                 ]
             });
@@ -125,7 +125,7 @@ exports.generateSitemap = async (baseUrl) => {
                 entries.push({
                     loc: `/${ll}-${cc}/radio-${tt}/${f}`,
                     alternates: [
-                        ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio-${tt}/${f}`, lang: `${ll}-${cc}` })),
+                        ...Locale_1.langCodes.map(ll => ({ href: `/${ll}-${cc}/radio-${tt}/${f}`, lang: ll })),
                         { href: `/xx-${cc}/radio-${tt}/${s}`, lang: "x-default" }
                     ]
                 });
