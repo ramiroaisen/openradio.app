@@ -210,6 +210,11 @@
 
   const playFile = async url => {
     try {
+      // always proxy http (avoid chrome block)
+      if(!url.startsWith("https")) {
+        url = `/proxy/${url}`;
+      }
+
       mediaElement.src = url;
       await mediaElement.load();
       await mediaElement.play();
