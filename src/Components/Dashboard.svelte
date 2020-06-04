@@ -23,11 +23,6 @@
     align-items: center;
     justify-content: center;
   }
-
-  ins {
-    width: 100%;
-    height: 100%;
-  }
 </style>
 
 <script>
@@ -62,12 +57,9 @@
   <Player bind:this={player} />
   <div class="or-adbar">
     <ins class="adsbygoogle"
-         style="display:block"
+         style="display:inline-block;width:320px;height:80px"
          data-ad-client="ca-pub-6229656373494263"
-         data-ad-slot="7901569070"
-         data-ad-format="auto"
-         data-adtest="on"
-         data-full-width-responsive="true">
+         data-ad-slot="7901569070">
     </ins>
   </div>
 </div>
