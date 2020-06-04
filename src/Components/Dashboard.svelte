@@ -6,23 +6,6 @@
     display: flex;
     flex-direction: column;
   }
-
-  .or-adbar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: var(--adbar-height);
-    max-height: var(--adbar-height);
-    min-height: var(--adbar-height);
-    box-sizing: border-box;
-    background: #ddd;
-    border-top: #999 1px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
 </style>
 
 <script>
@@ -55,11 +38,4 @@
   </main>
   <Nav/>
   <Player bind:this={player} />
-  <div class="or-adbar">
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:320px;height:80px"
-         data-ad-client="ca-pub-6229656373494263"
-         data-ad-slot="7901569070">
-    </ins>
-  </div>
 </div>

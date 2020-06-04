@@ -47,12 +47,38 @@
 	<!-- This contains the contents of the <svelte:head> component, if
 	     the current page has one -->
 	%sapper.head%
+
+	<style>
+		.or-adbar {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: var(--adbar-height);
+			max-height: var(--adbar-height);
+			min-height: var(--adbar-height);
+			box-sizing: border-box;
+			background: #ddd;
+			border-top: #999 1px solid;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
 </head>
 <body>
 	<!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
 	<div id="sapper">%sapper.html%</div>
 
+	<div class="or-adbar">
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:320px;height:80px"
+			 data-ad-client="ca-pub-6229656373494263"
+			 data-ad-slot="7901569070">
+		</ins>
+	</div>
 <!-- deferjs -->
 <script>
 	!function(e,o,t,n,i,d){function f(e,t){d?n(e,t||32):i.push(e,t)}function c(e,t,n,i){return t&&o.getElementById(t)||(i=o.createElement(e||'SCRIPT'),t&&(i.id=t),n&&(i.onload=n),o.head.appendChild(i)),i||{}}d=/p/.test(o.readyState),e.addEventListener('on'+t in e?t:'load',function(){for(d=1;i[0];)f(i.shift(),i.shift())}),f._=c,e.defer=f,e.deferscript=function(e,t,n,i){f(function(){c('',t,i).src=e},n)}}(this,document,'pageshow',setTimeout,[]);
