@@ -1,6 +1,6 @@
 <style>
   .page{
-    padding-bottom: 8rem;
+    padding-bottom: 15rem;
   }
 
   .page > :global(h1) {

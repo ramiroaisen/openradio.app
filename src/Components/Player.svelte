@@ -7,7 +7,7 @@
     flex-direction: row;
     position: fixed;
     right: 0;
-    bottom: 0;
+    bottom: var(--adbar-height);
     width: 100%;
     height: 86px;
     
