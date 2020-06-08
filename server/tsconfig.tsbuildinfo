@@ -421,10 +421,6 @@
         "version": "336db27c26a627c0c6cecb6a542a12a49dbc51f7c7d4f59976b00d0e1bf7cdb7",
         "signature": "28bf47a077458a9703762bbb92ac704ea02cabcfdde9dccc1dee5109d26719f8"
       },
-      "./node_modules/@types/compression/index.d.ts": {
-        "version": "12509b418cf3a93cf601026f9a82c496da31e355cd30b10bdd46c9e50a3e81c5",
-        "signature": "12509b418cf3a93cf601026f9a82c496da31e355cd30b10bdd46c9e50a3e81c5"
-      },
       "./node_modules/@types/morgan/index.d.ts": {
         "version": "7b38866aa1fa86de989e91cccf2680fed5a4de0d6e48ea559331cb50bfb3a615",
         "signature": "7b38866aa1fa86de989e91cccf2680fed5a4de0d6e48ea559331cb50bfb3a615"
@@ -432,6 +428,14 @@
       "./node_modules/@types/helmet/index.d.ts": {
         "version": "0689dfab1933604b01cfd5149a32d5fa383fbfef4a9e6c5a8d3a8cf2a4f52cde",
         "signature": "0689dfab1933604b01cfd5149a32d5fa383fbfef4a9e6c5a8d3a8cf2a4f52cde"
+      },
+      "./node_modules/isbot/index.d.ts": {
+        "version": "ecf9ecc3bac148d4b086833b8468d1a93094847ad87d28e4002fd5688ca2450b",
+        "signature": "ecf9ecc3bac148d4b086833b8468d1a93094847ad87d28e4002fd5688ca2450b"
+      },
+      "./node_modules/@types/cookie-parser/index.d.ts": {
+        "version": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8",
+        "signature": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8"
       },
       "./node_modules/@types/request-ip/index.d.ts": {
         "version": "0e9415cce4f33903e404412f669ee5901d992be3a789983521ec51f96803aa4f",
@@ -461,12 +465,8 @@
         "version": "9f2f11b0a20d75c53768c7b473fa52fbbdac0ae852f225c4f2ec7c04e578e6ff",
         "signature": "3032d50de9a956d4756a883b8dc3dcd74a7f9cfa71bbbc24464ca8e4d7a70d94"
       },
-      "./node_modules/isbot/index.d.ts": {
-        "version": "ecf9ecc3bac148d4b086833b8468d1a93094847ad87d28e4002fd5688ca2450b",
-        "signature": "ecf9ecc3bac148d4b086833b8468d1a93094847ad87d28e4002fd5688ca2450b"
-      },
       "./src/app.ts": {
-        "version": "889e8d6885610527d21a06ae50a4e73886326fe311635c8acf0e76636baa642b",
+        "version": "a9b20fe9b4d8f454598b80dd7925216a6081e6da5a73898e6956cd93368e635d",
         "signature": "c89881022c41362a2953475064ba1159c6532f73eab0a620bd56814885748493"
       },
       "./node_modules/remove-accents/index.d.ts": {
@@ -1736,13 +1736,6 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
-      "./node_modules/@types/compression/index.d.ts": [
-        "./node_modules/@types/express/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
       "./node_modules/@types/morgan/index.d.ts": [
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
@@ -1751,6 +1744,19 @@
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
       "./node_modules/@types/helmet/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/isbot/index.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/@types/cookie-parser/index.d.ts": [
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
@@ -1817,12 +1823,6 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
-      "./node_modules/isbot/index.d.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
       "./src/app.ts": [
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/path.d.ts",
@@ -1830,9 +1830,10 @@
         "./src/config.ts",
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/serve-static/index.d.ts",
-        "./node_modules/@types/compression/index.d.ts",
         "./node_modules/@types/morgan/index.d.ts",
         "./node_modules/@types/helmet/index.d.ts",
+        "./node_modules/isbot/index.d.ts",
+        "./node_modules/@types/cookie-parser/index.d.ts",
         "./node_modules/@types/request-ip/index.d.ts",
         "./src/types/geoip-country/index.ts",
         "./src/redirects.ts",
@@ -1840,7 +1841,6 @@
         "./src/i18n/v2/i18n.ts",
         "./src/proxy.ts",
         "./src/db/Country.ts",
-        "./node_modules/isbot/index.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
@@ -3386,13 +3386,6 @@
         "./node_modules/@types/express/index.d.ts",
         "./src/db/Continent.ts"
       ],
-      "./node_modules/@types/compression/index.d.ts": [
-        "./node_modules/@types/express/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
       "./node_modules/@types/morgan/index.d.ts": [
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
@@ -3401,6 +3394,19 @@
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
       "./node_modules/@types/helmet/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/isbot/index.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/@types/cookie-parser/index.d.ts": [
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
@@ -3432,12 +3438,6 @@
       ],
       "./src/proxy.ts": [
         "./node_modules/@types/express/index.d.ts"
-      ],
-      "./node_modules/isbot/index.d.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
       "./node_modules/remove-accents/index.d.ts": [
         "./node_modules/@types/node/fs.d.ts",
@@ -4057,9 +4057,10 @@
       "./src/search.ts",
       "./node_modules/threads/dist/symbols.d.ts",
       "./src/api.ts",
-      "./node_modules/@types/compression/index.d.ts",
       "./node_modules/@types/morgan/index.d.ts",
       "./node_modules/@types/helmet/index.d.ts",
+      "./node_modules/isbot/index.d.ts",
+      "./node_modules/@types/cookie-parser/index.d.ts",
       "./node_modules/@types/request-ip/index.d.ts",
       "./src/types/geoip-country/index.ts",
       "./node_modules/@types/accept-language-parser/index.d.ts",
@@ -4067,8 +4068,6 @@
       "./src/i18n/v2/i18n.ts",
       "./src/redirects.ts",
       "./src/proxy.ts",
-      "./node_modules/isbot/index.d.ts",
-      "./src/app.ts",
       "./node_modules/remove-accents/index.d.ts",
       "./src/search-ts.ts",
       "./src/db/scripts/deletefuzzy.ts",
@@ -4180,9 +4179,10 @@
       "./node_modules/@types/terminal-kit/TextBuffer.d.ts",
       "./node_modules/@types/terminal-kit/Rect.d.ts",
       "./node_modules/@types/terminal-kit/index.d.ts",
+      "./src/sitemap/generate.ts",
       "./src/types/index.ts",
       "./src/types/isbot/index.d.ts",
-      "./src/sitemap/generate.ts"
+      "./src/app.ts"
     ]
   },
   "version": "3.7.5"

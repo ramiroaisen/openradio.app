@@ -2252,7 +2252,7 @@ function get_page_handler(
 <script${nonce_attr}>defer(function(){(0, eval)(document.getElementById("sapper-script").innerHTML)}, 1000)</script>
 `;
 
-			const body = template()
+			let body = template()
 				.replace("%sapper.lang%", () => (res ).lang || "")
 				.replace('%sapper.base%', () => `<base href="${req.baseUrl}/">`)
 				.replace('%sapper.scripts%', () => scripts_html)
@@ -2260,8 +2260,15 @@ function get_page_handler(
 				.replace('%sapper.head%', () => `<noscript id='sapper-head-start'></noscript>${head}<noscript id='sapper-head-end'></noscript>`)
 				.replace('%sapper.styles%', () => styles);
 
+			if(res.locals.template_replace) {
+				for(const [key, value] of Object.entries(res.locals.template_replace)) {
+					body = body.replace(`%${key}%`, value);
+				}
+			}
+
 			res.statusCode = status;
 			res.end(body);
+
 		} catch(err) {
 			if (error) {
 				bail(req, res, err);

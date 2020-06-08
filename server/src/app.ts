@@ -5,16 +5,14 @@ import http from "http";
 
 import * as config from "./config";
 
-//const polka = require("polka");
 import express, { Request, Response } from "express";
 
-// TODO: Write definitions
-//const sirv = require("sirv") as any;
 import serve from "serve-static";
 
-import compression from "compression";
 import morgan from "morgan";
 import helmet from "helmet";
+import isBot from "isbot";
+import cookies from "cookie-parser";
 
 import {getClientIp} from "request-ip";
 import {geoip} from "./types/geoip-country";
@@ -22,15 +20,10 @@ import {geoip} from "./types/geoip-country";
 import * as redirects from "./redirects";
 import * as api from "./api";
 
-//const i18n = require("./i18n/server");
 import {i18n} from "./i18n/v2/i18n";
 
 import * as proxy from "./proxy";
 import { getCollection } from "./db/Country";
-
-import isBot from "isbot";
-
-//const redirects = require("./redirects");
 
 export const start = async (sapper: any) => {
   const { PORT, NODE_ENV } = process.env;
@@ -43,25 +36,21 @@ export const start = async (sapper: any) => {
     app.use(morgan("dev"));
   }
 
+  app.use(helmet());
+
   app.use((req, res, next) => {
     const ua = req.headers["user-agent"];
     if(typeof ua === "string"){
-      if(isBot(ua)){
+      if(!/node-fetch/.test(ua) && isBot(ua)){
         console.log(`BOT: ${req.headers["user-agent"]}`)
+        console.log(`BOT => ${req.url}`)
       }
     }
     next();
   })
 
-  app // You can also use Express
-    .use(
-      compression({ threshold: 0 }),
-      helmet(),
-      //sirv('static/static/imm', { dev: false, maxAge: 31536000, immutable: true }),
-      //sirv(path.resolve(__dirname, '../../static'), { dev: false, etag: true, maxAge: 1000 * 60 * 60 * 24 }),
-      serve(path.resolve(__dirname, '../../static'), { etag: true, maxAge: 1000 * 60 * 60 * 24 * 365 })
-    );
-  
+  app.use(serve(path.resolve(__dirname, '../../static'), { etag: true, maxAge: 1000 * 60 * 60 * 24 * 365 }));
+
   console.log("Attaching redirects");
   await redirects.attach(app);
 
@@ -97,9 +86,23 @@ export const start = async (sapper: any) => {
     next();
   })
 
+  app.use(cookies());
+  app.use((req, res, next) => {
+    if("openradio-adtest" in req.cookies) {
+      res.locals.template_replace = {
+        "openradio.adtest-attr": 'data-adtest="on"'
+      }
+    } else {
+      res.locals.template_replace = {
+        "openradio.adtest-attr": ""
+      };
+    }
+
+    next();
+  })
+
   app.use(
     sapper.middleware({
-      //ignore: ["/api", "/i18n", "/proxy"],
       session: (req: Request, res: Response) => {
         const {ipCountry} = req;
         return {...i18n.sapperSession(req, res), ipCountry}
