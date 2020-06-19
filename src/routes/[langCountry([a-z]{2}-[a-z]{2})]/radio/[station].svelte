@@ -249,7 +249,7 @@
 
         {#if station.web != null}
           <div class="data-wrap web">
-            <p><span class="label">{$trans("station.labels.web")}</span> <span class="data"><a href="{station.web}" rel="nofollow noopener" target="_blank">{formatWebText(station.web)}</a></span></p>
+            <p><span class="label">{$trans("station.labels.web")}</span> <span class="data"><a href="{station.web}" rel="noopener" target="_blank">{formatWebText(station.web)}</a></span></p>
           </div>
         {/if}
 
