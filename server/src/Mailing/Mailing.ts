@@ -77,8 +77,12 @@ const test = async () => {
         port: 465,
         secure: true,
         auth: {
+            type: "login",
             user: "ramiro@openradio.app",
             pass: "@Orimar123",
+        },
+        tls: {
+            rejectUnauthorized: false
         }
     })
 
@@ -104,7 +108,6 @@ const test = async () => {
         const subject = "Estamos listando su radio en nuestro sitio";
 
         const info = await transport.sendMail({
-            from: "Ramiro de openradio.app <ramiro@openradio.app>",
             to: "test@openradio.app",
             html: body.html,
             text: body.text,
