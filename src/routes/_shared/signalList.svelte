@@ -50,7 +50,7 @@
 <Page {meta}>
   <h1>{title}</h1>
   <LinkListBox>
-    {#each signals as frec}
+    {#each signals.filter(f => f != null) as frec}
       <UnderlineLink 
         href={signalUrl({lang: $lang, countryCode: $countryCode, type, frec})}
         text={$trans("signal.link.text", {type, frec})}

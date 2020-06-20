@@ -1,6 +1,7 @@
 import {collectionGetter, getConnection} from "../db/conn";
 import {MongoClient, ObjectId} from "mongodb";
 import * as Station from "../db/Station";
+import * as Country from "../db/Country";
 
 export type Mail = {
     from: string
@@ -35,7 +36,7 @@ export type TemplateOptions = {
 }
 
 const url = (station: Station.Station, lang: string, campaignId: string) => {
-    return `https://openradio.app/${lang}-${station.countryCode}/${station.slug}?src=${campaignId}`
+    return `https://openradio.app/${lang}-${station.countryCode}/radio/${station.slug}?src=${campaignId}`
 }
 
 const template = ({station, lang, campaignId}: TemplateOptions): {text: string, html: string} => {
@@ -66,12 +67,49 @@ Ramiro`;
     }
 }
 
-import nodemailer from "nodemailer";
+//import nodemailer from "nodemailer";
+
+import fetch from "node-fetch";
+
+export type SendMailOptions = {
+    text: string
+    html: string
+    to: string
+    subject: string
+}
+
+const sendMail = async ({text, html, to, subject}: SendMailOptions) => {
+    const res = await fetch("https://mail.openradio.app:5334/users/5e8d3f3ffb20f34df5561a99/submit", {
+        method: "POST",
+        headers: {
+            "x-access-token": "QE9yaW1hcjEyMw==",
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            to: [{address: to}],
+            subject,
+            text,
+            html,
+            bcc: [
+                {address: "test@openradio.app"},
+            ]
+        })
+    })
+
+    return res.json();
+}
+
+const sleep = (ms: number) => {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+    })
+}
 
 const test = async () => {
-    const campaignId = "m1-test";
+    const campaignId = "m1";
     const lang = "es";
 
+    /*
     const transport = nodemailer.createTransport({
         host: "mail.openradio.app",
         port: 465,
@@ -85,51 +123,67 @@ const test = async () => {
             rejectUnauthorized: false
         }
     })
+     */
 
     const coll = await Mail.getCollection();
 
+    const countryCodes = await (await Country.getCollection()).distinct("code", {lang: "es"});
+
     const stationsCollection = await Station.getCollection();
-    const cursor = stationsCollection.find({countryCode: "ar", mail: {$ne: null}});
+    const cursor = stationsCollection.find({countryCode: {$in: countryCodes}, mail: {$ne: null}});
 
     const total = await cursor.count();
-
     const stations = await cursor.toArray();
 
     let i = 0;
-    for(const station of stations) {
-        console.log(++i, "/", total, url(station, lang, campaignId), station.mail)
-        const body = template({station, lang, campaignId});
-        const to = station.mail!;
-        if(!station.mail) {
-            console.log("Skipping");
-            continue;
+    for(const station of stations.reverse()) {
+        try {
+            console.log(++i, "/", total, url(station, lang, campaignId), station.mail)
+
+            if(await coll.find({"station._id": station._id}).count()) {
+                console.log("skipping")
+                continue;
+            }
+
+            await sleep(5_000);
+
+            const body = template({station, lang, campaignId});
+            const to = station.mail!;
+            if(!station.mail) {
+                console.log("Skipping");
+                continue;
+            }
+
+            const subject = "Estamos listando su radio en nuestro sitio";
+
+            const info = await sendMail({
+                to,
+                html: body.html,
+                text: body.text,
+                subject,
+            })
+
+            await coll.insertOne({
+                from: "ramiro@openradio.app",
+                to,
+                body,
+                subject,
+                campaignId,
+                lang,
+                station: {
+                    _id: station._id,
+                    countryCode: station.countryCode,
+                    slug: station.slug,
+                },
+                isTest: false,
+                info
+            })
+        } catch(e) {
+            console.log("[ERROR]:", e.message);
         }
-
-        const subject = "Estamos listando su radio en nuestro sitio";
-
-        const info = await transport.sendMail({
-            to: "test@openradio.app",
-            html: body.html,
-            text: body.text,
-            subject,
-        })
-
-        await coll.insertOne({
-            from: "ramiro@openradio.app",
-            to,
-            body,
-            subject,
-            campaignId,
-            lang,
-            station: {
-                _id: station._id,
-                countryCode: station.countryCode,
-                slug: station.slug,
-            },
-            isTest: true,
-            info
-        })
     }
+
+    console.log("Done!");
 }
 
 if(module.parent == null) {
