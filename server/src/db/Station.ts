@@ -89,6 +89,11 @@ export type Station = {
   signalCache: {
     am: number[]
     fm: number[]
+  },
+
+  mailVerirficationResult?: {
+    mail: string,
+    info: any
   }
 }
 

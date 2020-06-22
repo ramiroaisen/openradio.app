@@ -14,7 +14,46 @@ const http_1 = __importDefault(require("http"));
 const https_1 = __importDefault(require("https"));
 const config = __importStar(require("./config"));
 const url_1 = require("url");
+const net_1 = __importDefault(require("net"));
+const parse_headers = require("parse-headers");
 exports.attach = (app) => {
+    const socketProxy = (req, res, urlstr) => {
+        try {
+            const url = new url_1.URL(urlstr);
+            const accept = (req.headers.accept || "audio/*");
+            const port = Number(url.port) || (url.protocol === "https:" ? 443 : 80);
+            const socket = net_1.default.connect(port, url.hostname);
+            socket.on("ready", () => {
+                const HEAD = [
+                    `GET ${url.pathname + url.search} HTTP/1.0`,
+                    `host: ${url.hostname}`,
+                    `accept: ${accept}`
+                ].join("\r\n") + "\r\n\r\n";
+                socket.write(HEAD);
+                let head_received = false;
+                let head = "";
+                socket.on("data", (chunk) => {
+                    if (!head_received) {
+                        const str = chunk.toString("utf8");
+                        let parts = str.split("\r\n\r\n", 2);
+                        head += parts[0];
+                        if (parts.length !== 1) {
+                            head_received = true;
+                            const contentType = parse_headers(head)["content-type"];
+                            const headers = contentType ? { "content-type": contentType } : {};
+                            res.writeHead(200, headers);
+                            socket.pipe(res);
+                        }
+                    }
+                }).on("error", error => {
+                    res.end();
+                });
+            });
+        }
+        catch (e) {
+            res.end();
+        }
+    };
     app.use("/proxy", (req, res) => {
         //only proxy from own domains
         if (!config.local) {
@@ -44,16 +83,34 @@ exports.attach = (app) => {
         const get = url.startsWith("https") ? https_1.default.get : http_1.default.get;
         try {
             get(url, backend => {
+                console.log("getted", backend);
                 res.writeHead(backend.statusCode, backend.headers);
                 //res.pipe(backend);
                 backend.pipe(res);
-            }).on("error", () => {
-                console.log(`proxy: ${url} net error`);
+            }).on("error", error => {
+                // ICY url
+                // @ts-ignore
+                if (error.code === "HPE_INVALID_CONSTANT") {
+                    if (url.startsWith("https")) {
+                        res.header("x-openradio-proxy-fail", "unimplemented icy-https proxy request");
+                        res.end();
+                        console.log(`proxy: ${url} error, unimplemented icy-https proxy request`);
+                    }
+                    else {
+                        console.log(`proxy: ${url}, entering raw proxy mode (probably ICY server)`);
+                        socketProxy(req, res, url);
+                    }
+                    return;
+                }
+                res.header("x-openradio-proxy-fail", "unknown");
                 res.end();
+                console.log(`proxy: ${url} error, unknown: ` + error.message);
             });
         }
         catch (e) {
+            res.header("x-openradio-proxy-fail", "cannot connect to host");
             res.end();
+            console.log(`proxy: ${url} error in connection: ` + e.message);
         }
     });
 };

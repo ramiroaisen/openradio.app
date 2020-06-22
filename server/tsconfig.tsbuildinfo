@@ -350,8 +350,8 @@
         "signature": "bae2f68957fdf5b0fc10ecae663f8d5c3e33a8f9791a26b631ed01d82855abd9"
       },
       "./src/db/Station.ts": {
-        "version": "7384d0ae76c3d910aa073d48e5f3d6a0058f43507c7758ba1eb7a264277377d5",
-        "signature": "5a0ba952b79c891cc3be3e1f3cf1e7cb7b381a93ac4ede1d09a7d8ce9a9e7cdf"
+        "version": "f94212e7d6b7ccbf021eaa69e129e7bb9c9de2d6488b7e529cecde4410dac0d1",
+        "signature": "fb3bc72dccec5d266f6bd9b043447a299106aff8ac60c3ef6dcc0f96793f3dfd"
       },
       "./src/i18n/v2/src/en.ts": {
         "version": "a579d2426ba6c7e0f383799850df2b21b71dc65d8fac0408bdadec9b60336f9c",
@@ -462,7 +462,7 @@
         "signature": "60c175e9376e71770e684f6fec492803e5a63529ea161de71d9bee0c7478ae64"
       },
       "./src/proxy.ts": {
-        "version": "9f2f11b0a20d75c53768c7b473fa52fbbdac0ae852f225c4f2ec7c04e578e6ff",
+        "version": "6c877a3a06905fa452fe2c180c9da554089931aa6859bcdf9bd208d2e3620b0f",
         "signature": "3032d50de9a956d4756a883b8dc3dcd74a7f9cfa71bbbc24464ca8e4d7a70d94"
       },
       "./src/app.ts": {
@@ -476,6 +476,58 @@
       "./src/search-ts.ts": {
         "version": "ba33675cb992d1636f151f2d891d4316e8d4c514268b1f28669201cf19cedd7b",
         "signature": "830c83a3610da6f4bfec412741a01f6302389d95d5ca6722360c731ba2ef37ec"
+      },
+      "./src/Mailing/conn.ts": {
+        "version": "fbd9a6d4cbd12b38f454450a55c726fb525b051ae9b743c152ff0c264848672b",
+        "signature": "91b97995f1ebeae5c90c69043274d691295d804c3ad82eecd1c2dc741702ef57"
+      },
+      "./node_modules/chalk/index.d.ts": {
+        "version": "c824427af4986c2124de29d9fda0071cc043b1a855a0e723fa8ca31d4256c23f",
+        "signature": "c824427af4986c2124de29d9fda0071cc043b1a855a0e723fa8ca31d4256c23f"
+      },
+      "./node_modules/p-limit/index.d.ts": {
+        "version": "f0f0fa01772a2d3baedca7341b361483e25bb275cb645bc3b52d9c8b569eb40f",
+        "signature": "f0f0fa01772a2d3baedca7341b361483e25bb275cb645bc3b52d9c8b569eb40f"
+      },
+      "./src/Mailing/MailAddress.ts": {
+        "version": "a3ed834fd6c7f118b28a70ce020c3251b118f9508ef9988bb17c069a26d40ba6",
+        "signature": "8f50c8a08f453bb8cee181b9ac4696df86bd99d7009125a4bd7a5c69fa1acdee"
+      },
+      "./node_modules/form-data/index.d.ts": {
+        "version": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89",
+        "signature": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89"
+      },
+      "./node_modules/@types/node-fetch/externals.d.ts": {
+        "version": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
+        "signature": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73"
+      },
+      "./node_modules/@types/node-fetch/index.d.ts": {
+        "version": "c9d63ee4a61f19e98fd55c3c7d5a3dbdfbcf787a0136ee99f5e116a0eed2ac6d",
+        "signature": "c9d63ee4a61f19e98fd55c3c7d5a3dbdfbcf787a0136ee99f5e116a0eed2ac6d"
+      },
+      "./src/Mailing/Mailing.ts": {
+        "version": "bc895b4d535ce062b24a0706e823e7f8fe4579a22888fe3393a9158eea13488c",
+        "signature": "8cc2d72187298aacfd5726e27b912abf1a43e0a6f3db220738dc371872c00976"
+      },
+      "./node_modules/@types/cheerio/index.d.ts": {
+        "version": "8098228829e1e526875bb83562d96c23648aabfab6d8a07881fe23251e853822",
+        "signature": "8098228829e1e526875bb83562d96c23648aabfab6d8a07881fe23251e853822"
+      },
+      "./src/Mailing/Website.ts": {
+        "version": "164ad941454015e1b3013cbe6f1ca13439c8e084e52d003dfca6a5794d53ab51",
+        "signature": "e4099b9b6658eeeb081a4a3c767c69386a3103933ea0af4a41fd1fd3328a2bf9"
+      },
+      "./src/Mailing/mailcheck.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "./src/Mailing/parseMailsFromWebsites.ts": {
+        "version": "7b6e0e0a7ea661d046f61004ff592f2cbcbec8dc8c1ea3c224c2f842b51f5b48",
+        "signature": "fc096df87e10947a9c2142c386e9f7010f09d421d9aa4115922977bab4866706"
+      },
+      "./src/Mailing/socket-proxy.ts": {
+        "version": "33deeb41ed1e1d82f1c9bd45c88221b9eddb0cecec9b0c398c520426d0ef4e0f",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "./src/db/scripts/deletefuzzy.ts": {
         "version": "cd4cf6b067fce8f203cff0194780660ab0fe49fa4a285340ec6cc67197e1637e"
@@ -492,7 +544,8 @@
         "version": "801c28da2e56c26d98e7ceb1ea121b599adfd425f744cf776fc8e28f2ecf8583"
       },
       "./src/db/scripts/mangoradio.ts": {
-        "version": "5cb1db1a30c5899009ccca25af94d50544d98a3ee8b2396010e1806f7e17bb09"
+        "version": "5cb1db1a30c5899009ccca25af94d50544d98a3ee8b2396010e1806f7e17bb09",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "./node_modules/conqurrent/index.d.ts": {
         "version": "ae5d11d5d29c992e222d02d770144341da96e40df65b19e5024fa29df342e197",
@@ -606,10 +659,6 @@
         "version": "cde6be327ffd342a8c840cb67e85c94dfff93d16613c273971f1cc9e6201ded7",
         "signature": "cde6be327ffd342a8c840cb67e85c94dfff93d16613c273971f1cc9e6201ded7"
       },
-      "./node_modules/@types/cheerio/index.d.ts": {
-        "version": "8098228829e1e526875bb83562d96c23648aabfab6d8a07881fe23251e853822",
-        "signature": "8098228829e1e526875bb83562d96c23648aabfab6d8a07881fe23251e853822"
-      },
       "./src/db/scripts/worker.ts": {
         "version": "7c75955bfc65e4e39d891b5a17dbeb5931b905157ac48e2769fc6aebea3fb0be",
         "signature": "75846cae119dab9df6e43195fb3c2e729ddfa46daaad0b09398dc4dbc3b282e4"
@@ -641,25 +690,9 @@
         "version": "edd1570886f74b14537167db4cd247a4a868754ad4a4b1f4c356538b15d5eff9",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
-      "./node_modules/chalk/index.d.ts": {
-        "version": "c824427af4986c2124de29d9fda0071cc043b1a855a0e723fa8ca31d4256c23f",
-        "signature": "c824427af4986c2124de29d9fda0071cc043b1a855a0e723fa8ca31d4256c23f"
-      },
       "./src/i18n/v2/check.ts": {
         "version": "b44159a45ed88426f998665197768644406a342266de9c4d859f263a1a2dc487",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
-      },
-      "./node_modules/form-data/index.d.ts": {
-        "version": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89",
-        "signature": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89"
-      },
-      "./node_modules/@types/node-fetch/externals.d.ts": {
-        "version": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73",
-        "signature": "972f1e91dab93b182624a17eeed02f683b8cb3fefbda7b689cc84570029d5f73"
-      },
-      "./node_modules/@types/node-fetch/index.d.ts": {
-        "version": "c9d63ee4a61f19e98fd55c3c7d5a3dbdfbcf787a0136ee99f5e116a0eed2ac6d",
-        "signature": "c9d63ee4a61f19e98fd55c3c7d5a3dbdfbcf787a0136ee99f5e116a0eed2ac6d"
       },
       "./node_modules/@types/minimatch/index.d.ts": {
         "version": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633",
@@ -672,10 +705,6 @@
       "./node_modules/@types/rimraf/index.d.ts": {
         "version": "ad23ef9834b5b8819ca9da91e9d534514d47d31d33fa384d82697c7b9502572c",
         "signature": "ad23ef9834b5b8819ca9da91e9d534514d47d31d33fa384d82697c7b9502572c"
-      },
-      "./node_modules/p-limit/index.d.ts": {
-        "version": "f0f0fa01772a2d3baedca7341b361483e25bb275cb645bc3b52d9c8b569eb40f",
-        "signature": "f0f0fa01772a2d3baedca7341b361483e25bb275cb645bc3b52d9c8b569eb40f"
       },
       "./src/i18n/v2/src/es.ts": {
         "version": "626a4daba720177fddbc351b18088b8fdc6b92fc03e5651ad43d959e13f02cc0",
@@ -1818,6 +1847,7 @@
         "./src/config.ts",
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/node/url.d.ts",
+        "./node_modules/@types/node/net.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -1856,6 +1886,117 @@
         "./src/db/Station.ts",
         "./src/db/common.ts",
         "./src/utils.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/conn.ts": [
+        "./node_modules/@types/mongodb/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/chalk/index.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/p-limit/index.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/MailAddress.ts": [
+        "./src/db/Station.ts",
+        "./src/Mailing/conn.ts",
+        "./src/utils.ts",
+        "./node_modules/chalk/index.d.ts",
+        "./node_modules/p-limit/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/form-data/index.d.ts": [
+        "./node_modules/@types/node/stream.d.ts",
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/ts3.5/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/@types/node-fetch/externals.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/@types/node-fetch/index.d.ts": [
+        "./node_modules/form-data/index.d.ts",
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/url.d.ts",
+        "./node_modules/@types/node-fetch/externals.d.ts",
+        "./node_modules/@types/node/ts3.5/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/Mailing.ts": [
+        "./src/db/conn.ts",
+        "./node_modules/@types/mongodb/index.d.ts",
+        "./src/db/Station.ts",
+        "./src/db/Country.ts",
+        "./node_modules/@types/node-fetch/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/@types/cheerio/index.d.ts": [
+        "./node_modules/@types/node/ts3.5/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/Website.ts": [
+        "./src/db/Station.ts",
+        "./src/Mailing/conn.ts",
+        "./node_modules/@types/node/url.d.ts",
+        "./node_modules/@types/cheerio/index.d.ts",
+        "./node_modules/@types/node-fetch/index.d.ts",
+        "./node_modules/p-limit/index.d.ts",
+        "./node_modules/chalk/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/mailcheck.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/parseMailsFromWebsites.ts": [
+        "./src/Mailing/Website.ts",
+        "./node_modules/@types/node-fetch/index.d.ts",
+        "./node_modules/@types/cheerio/index.d.ts",
+        "./node_modules/chalk/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/socket-proxy.ts": [
+        "./node_modules/@types/node/url.d.ts",
+        "./node_modules/@types/node/net.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -2110,13 +2251,6 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
-      "./node_modules/@types/cheerio/index.d.ts": [
-        "./node_modules/@types/node/ts3.5/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
       "./src/db/scripts/worker.ts": [
         "./node_modules/threads/worker.d.ts",
         "./node_modules/@types/cheerio/index.d.ts",
@@ -2179,43 +2313,11 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
-      "./node_modules/chalk/index.d.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
       "./src/i18n/v2/check.ts": [
         "./src/i18n/v2/src/en.ts",
         "./src/i18n/v2/data/index.ts",
         "./src/i18n/v2/locales.json",
         "./node_modules/chalk/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./node_modules/form-data/index.d.ts": [
-        "./node_modules/@types/node/stream.d.ts",
-        "./node_modules/@types/node/http.d.ts",
-        "./node_modules/@types/node/ts3.5/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./node_modules/@types/node-fetch/externals.d.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./node_modules/@types/node-fetch/index.d.ts": [
-        "./node_modules/form-data/index.d.ts",
-        "./node_modules/@types/node/http.d.ts",
-        "./node_modules/@types/node/url.d.ts",
-        "./node_modules/@types/node-fetch/externals.d.ts",
-        "./node_modules/@types/node/ts3.5/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -2240,12 +2342,6 @@
         "./node_modules/@types/glob/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/index.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./node_modules/p-limit/index.d.ts": [
-        "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
@@ -3449,6 +3545,66 @@
         "./src/db/common.ts",
         "./src/db/Station.ts"
       ],
+      "./src/Mailing/conn.ts": [
+        "./node_modules/@types/mongodb/index.d.ts"
+      ],
+      "./node_modules/chalk/index.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/p-limit/index.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/MailAddress.ts": [
+        "./node_modules/@types/mongodb/index.d.ts",
+        "./src/db/Station.ts"
+      ],
+      "./node_modules/form-data/index.d.ts": [
+        "./node_modules/@types/node/stream.d.ts",
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/ts3.5/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/@types/node-fetch/externals.d.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./node_modules/@types/node-fetch/index.d.ts": [
+        "./node_modules/form-data/index.d.ts",
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/@types/node/url.d.ts",
+        "./node_modules/@types/node-fetch/externals.d.ts",
+        "./node_modules/@types/node/ts3.5/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/Mailing.ts": [
+        "./node_modules/@types/mongodb/index.d.ts",
+        "./src/db/Station.ts"
+      ],
+      "./node_modules/@types/cheerio/index.d.ts": [
+        "./node_modules/@types/node/ts3.5/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src/Mailing/Website.ts": [
+        "./node_modules/@types/mongodb/index.d.ts",
+        "./src/db/Station.ts"
+      ],
       "./node_modules/conqurrent/index.d.ts": [
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
@@ -3664,45 +3820,6 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
-      "./node_modules/@types/cheerio/index.d.ts": [
-        "./node_modules/@types/node/ts3.5/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./node_modules/chalk/index.d.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./node_modules/form-data/index.d.ts": [
-        "./node_modules/@types/node/stream.d.ts",
-        "./node_modules/@types/node/http.d.ts",
-        "./node_modules/@types/node/ts3.5/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./node_modules/@types/node-fetch/externals.d.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./node_modules/@types/node-fetch/index.d.ts": [
-        "./node_modules/form-data/index.d.ts",
-        "./node_modules/@types/node/http.d.ts",
-        "./node_modules/@types/node/url.d.ts",
-        "./node_modules/@types/node-fetch/externals.d.ts",
-        "./node_modules/@types/node/ts3.5/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
       "./node_modules/@types/minimatch/index.d.ts": [
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
@@ -3722,12 +3839,6 @@
         "./node_modules/@types/glob/index.d.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/index.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./node_modules/p-limit/index.d.ts": [
-        "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
@@ -4067,9 +4178,21 @@
       "./src/i18n/v2/locales.json",
       "./src/i18n/v2/i18n.ts",
       "./src/redirects.ts",
-      "./src/proxy.ts",
+      "./src/app.ts",
       "./node_modules/remove-accents/index.d.ts",
       "./src/search-ts.ts",
+      "./src/Mailing/conn.ts",
+      "./node_modules/chalk/index.d.ts",
+      "./node_modules/p-limit/index.d.ts",
+      "./src/Mailing/MailAddress.ts",
+      "./node_modules/form-data/index.d.ts",
+      "./node_modules/@types/node-fetch/externals.d.ts",
+      "./node_modules/@types/node-fetch/index.d.ts",
+      "./src/Mailing/Mailing.ts",
+      "./node_modules/@types/cheerio/index.d.ts",
+      "./src/Mailing/Website.ts",
+      "./src/Mailing/mailcheck.ts",
+      "./src/Mailing/parseMailsFromWebsites.ts",
       "./src/db/scripts/deletefuzzy.ts",
       "./src/db/scripts/formatProgramming.ts",
       "./src/db/scripts/get-signals.ts",
@@ -4103,7 +4226,6 @@
       "./node_modules/threads/dist/worker/index.d.ts",
       "./node_modules/threads/dist/index.d.ts",
       "./node_modules/threads/worker.d.ts",
-      "./node_modules/@types/cheerio/index.d.ts",
       "./src/db/scripts/worker.ts",
       "./src/db/scripts/master.ts",
       "./src/db/scripts/mergeCountries.ts",
@@ -4112,15 +4234,10 @@
       "./src/db/scripts/populateSignalCities.ts",
       "./src/db/scripts/sharp.ts",
       "./src/db/scripts/signalCache.ts",
-      "./node_modules/chalk/index.d.ts",
       "./src/i18n/v2/check.ts",
-      "./node_modules/form-data/index.d.ts",
-      "./node_modules/@types/node-fetch/externals.d.ts",
-      "./node_modules/@types/node-fetch/index.d.ts",
       "./node_modules/@types/minimatch/index.d.ts",
       "./node_modules/@types/glob/index.d.ts",
       "./node_modules/@types/rimraf/index.d.ts",
-      "./node_modules/p-limit/index.d.ts",
       "./src/i18n/v2/src/es.ts",
       "./src/i18n/v2/src/pt.ts",
       "./src/i18n/v2/generate.ts",
@@ -4182,7 +4299,8 @@
       "./src/sitemap/generate.ts",
       "./src/types/index.ts",
       "./src/types/isbot/index.d.ts",
-      "./src/app.ts"
+      "./src/proxy.ts",
+      "./src/Mailing/socket-proxy.ts"
     ]
   },
   "version": "3.7.5"
