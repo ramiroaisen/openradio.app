@@ -83,7 +83,6 @@ exports.attach = (app) => {
         const get = url.startsWith("https") ? https_1.default.get : http_1.default.get;
         try {
             get(url, backend => {
-                console.log("getted", backend);
                 res.writeHead(backend.statusCode, backend.headers);
                 //res.pipe(backend);
                 backend.pipe(res);

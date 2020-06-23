@@ -374,7 +374,7 @@
         "signature": "ee7507a9a5106796723eb2790f1da4d4134223167d6ba4f0ae6baae7744f9a62"
       },
       "./src/i18n/v2/Locale.ts": {
-        "version": "47aba610f2c4622b925085aa62aa17fcd61db9bae56842b0ef6abe349538c3f5",
+        "version": "724edc313276d3725452f5a15b1ee33a42a4e10030c36846f5a38b477648511f",
         "signature": "c45fc584044d2a7fee589cbae5a5526c1f7f961bca1013313fd2d7ba64af9219"
       },
       "./src/db/Country.ts": {
@@ -462,7 +462,7 @@
         "signature": "60c175e9376e71770e684f6fec492803e5a63529ea161de71d9bee0c7478ae64"
       },
       "./src/proxy.ts": {
-        "version": "6c877a3a06905fa452fe2c180c9da554089931aa6859bcdf9bd208d2e3620b0f",
+        "version": "209ea1aa0daa44977d3536d1ef958d824e7581b1c385f8cff045e37d74517a32",
         "signature": "3032d50de9a956d4756a883b8dc3dcd74a7f9cfa71bbbc24464ca8e4d7a70d94"
       },
       "./src/app.ts": {
@@ -506,7 +506,7 @@
         "signature": "c9d63ee4a61f19e98fd55c3c7d5a3dbdfbcf787a0136ee99f5e116a0eed2ac6d"
       },
       "./src/Mailing/Mailing.ts": {
-        "version": "bc895b4d535ce062b24a0706e823e7f8fe4579a22888fe3393a9158eea13488c",
+        "version": "de5382cdffee5ad8fef09d84f04fd3211a6ac54a03e1b8576eb43f892c8c42b4",
         "signature": "8cc2d72187298aacfd5726e27b912abf1a43e0a6f3db220738dc371872c00976"
       },
       "./node_modules/@types/cheerio/index.d.ts": {
@@ -1953,6 +1953,7 @@
         "./src/db/Station.ts",
         "./src/db/Country.ts",
         "./node_modules/@types/node-fetch/index.d.ts",
+        "./src/Mailing/MailAddress.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -4156,7 +4157,6 @@
       "./src/i18n/v2/data/langs.json",
       "./src/i18n/v2/data/weekDays.ts",
       "./src/i18n/v2/data/index.ts",
-      "./src/i18n/v2/Locale.ts",
       "./src/db/Country.ts",
       "./src/db/Genre.ts",
       "./src/utils.ts",
@@ -4178,6 +4178,7 @@
       "./src/i18n/v2/locales.json",
       "./src/i18n/v2/i18n.ts",
       "./src/redirects.ts",
+      "./src/proxy.ts",
       "./src/app.ts",
       "./node_modules/remove-accents/index.d.ts",
       "./src/search-ts.ts",
@@ -4193,6 +4194,7 @@
       "./src/Mailing/Website.ts",
       "./src/Mailing/mailcheck.ts",
       "./src/Mailing/parseMailsFromWebsites.ts",
+      "./src/Mailing/socket-proxy.ts",
       "./src/db/scripts/deletefuzzy.ts",
       "./src/db/scripts/formatProgramming.ts",
       "./src/db/scripts/get-signals.ts",
@@ -4299,8 +4301,7 @@
       "./src/sitemap/generate.ts",
       "./src/types/index.ts",
       "./src/types/isbot/index.d.ts",
-      "./src/proxy.ts",
-      "./src/Mailing/socket-proxy.ts"
+      "./src/i18n/v2/Locale.ts"
     ]
   },
   "version": "3.7.5"

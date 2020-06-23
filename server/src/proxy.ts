@@ -82,7 +82,6 @@ export const attach = (app: Application) => {
     
     try{
       get(url, backend => {
-        console.log("getted", backend);
         res.writeHead(backend.statusCode!, backend.headers);
         //res.pipe(backend);
         backend.pipe(res);

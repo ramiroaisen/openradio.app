@@ -1,8 +1,6 @@
 import {locale} from "./src/en";
 import {countryNames, langs, weekDays} from "./data";
 
-console.log(Object.keys(langs));
-
 export type Module = typeof locale;
 
 export type Locale = typeof locale & {

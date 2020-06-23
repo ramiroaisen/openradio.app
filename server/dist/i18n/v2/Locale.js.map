@@ -1,1 +1,1 @@
-{"version":3,"file":"Locale.js","sourceRoot":"","sources":["../../../src/i18n/v2/Locale.ts"],"names":[],"mappings":";;AACA,iCAAqD;AAErD,OAAO,CAAC,GAAG,CAAC,MAAM,CAAC,IAAI,CAAC,YAAK,CAAC,CAAC,CAAC;AAWnB,QAAA,WAAW,GAAG,IAAI,CAAC;AACnB,QAAA,SAAS,GAAG,MAAM,CAAC,IAAI,CAAC,YAAK,CAAC,CAAC,IAAI,EAAE,CAAC"}
+{"version":3,"file":"Locale.js","sourceRoot":"","sources":["../../../src/i18n/v2/Locale.ts"],"names":[],"mappings":";;AACA,iCAAqD;AAWxC,QAAA,WAAW,GAAG,IAAI,CAAC;AACnB,QAAA,SAAS,GAAG,MAAM,CAAC,IAAI,CAAC,YAAK,CAAC,CAAC,IAAI,EAAE,CAAC"}
