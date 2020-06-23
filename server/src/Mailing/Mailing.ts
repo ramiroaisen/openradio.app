@@ -70,6 +70,7 @@ Ramiro`;
 //import nodemailer from "nodemailer";
 
 import fetch from "node-fetch";
+import {MailAddress} from "./MailAddress";
 
 export type SendMailOptions = {
     text: string
@@ -125,6 +126,7 @@ const test = async () => {
     })
      */
 
+    const maddcoll = await MailAddress.getCollection();
     const coll = await Mail.getCollection();
 
     const countryCodes = await (await Country.getCollection()).distinct("code", {lang: "es"});
@@ -136,12 +138,23 @@ const test = async () => {
     const stations = await cursor.toArray();
 
     let i = 0;
+    let skipped = 0;
+    let sent = 0;
+    let mailSkipped = 0;
     for(const station of stations.reverse()) {
         try {
-            console.log(++i, "/", total, url(station, lang, campaignId), station.mail)
+            console.log(mailSkipped, "|", ++i, "/", total, url(station, lang, campaignId), station.mail)
 
             if(await coll.find({"station._id": station._id}).count()) {
+                skipped++;
                 console.log("skipping")
+                continue;
+            }
+
+            const mailAddress = await maddcoll.findOne({address: station.mail!});
+            if(mailAddress!.stations.length > 1) {
+                mailSkipped++;
+                console.log("skipping");
                 continue;
             }
 
