@@ -14,7 +14,12 @@ export type Mail = {
         text: string,
         html: string
     }
-    station: {
+    station?: {
+        _id: ObjectId
+        countryCode: string
+        slug: string
+    }
+    stations?: {
         _id: ObjectId
         countryCode: string
         slug: string
@@ -30,7 +35,7 @@ export namespace Mail {
 }
 
 export type TemplateOptions = {
-    station: Station.Station
+    stations: Station.Station[]
     campaignId: string
     lang: string
 }
@@ -39,7 +44,7 @@ const url = (station: Station.Station, lang: string, campaignId: string) => {
     return `https://openradio.app/${lang}-${station.countryCode}/radio/${station.slug}?src=${campaignId}`
 }
 
-const template = ({station, lang, campaignId}: TemplateOptions): {text: string, html: string} => {
+const template = ({stations, lang, campaignId}: TemplateOptions): {text: string, html: string} => {
 const body =
     `\
 Buenos días,
@@ -48,11 +53,16 @@ Soy Ramiro, de openradio.app.
 
 Somos un portal de radio en vivo para más de 130 países y con cerca de 45.000 radios en todo el mundo.
 
-Me comunico con ustedes para contarles que estamos listando su radio en nuestro sitio.
+Me comunico con ustedes para contarles que estamos listando algunas de sus radio en nuestro sitio. 
 
-Pueden verla en <a href="${url(station, lang, campaignId)}">${url(station, lang, campaignId)}</a>
+Pueden verlas entrando a:
 
-Les queríamos pedir si podrían ser tan amables de listarnos ustedes a nosotros también,
+${stations.map(station => 
+    `<a href="${url(station, lang, campaignId)}">${url(station, lang, campaignId)}</a>`
+).join("\n")}
+    
+Les queríamos pedir si podrían ser tan amables de linkearnos ustedes a nosotros también en su sitio, o comentar en sus redes que pueden ser escuchados por nuestra app
+
 eso nos ayudaría a crecer y difundir nuestro sitio.
 
 Quedo a su disposición para lo que necesiten.
@@ -106,9 +116,14 @@ const sleep = (ms: number) => {
     })
 }
 
+import chalk from "chalk";
+
 const test = async () => {
-    const campaignId = "m1";
+    const campaignId = "m2";
     const lang = "es";
+
+    let currentCount = 0;
+    let currentStationCount = 0;
 
     /*
     const transport = nodemailer.createTransport({
@@ -134,40 +149,39 @@ const test = async () => {
     const stationsCollection = await Station.getCollection();
     const cursor = stationsCollection.find({countryCode: {$in: countryCodes}, mail: {$ne: null}});
 
-    const total = await cursor.count();
-    const stations = await cursor.toArray();
+    const stationIds = await stationsCollection.distinct("_id", {countryCode: {$in: countryCodes}});
+
+    console.log(stationIds.length, "stations");
+    // @ts-ignore
+    const adds = (await maddcoll.find({stations: {$gt: {$size: 1}}, "stations._id": {$in: stationIds}}).toArray())
+        // @ts-ignore
+        .filter(add => add.stations.length > 1);
+
+    console.log(adds.length, "addresses");
 
     let i = 0;
     let skipped = 0;
-    let sent = 0;
-    let mailSkipped = 0;
-    for(const station of stations.reverse()) {
+    for(const address of adds) {
+
         try {
-            console.log(mailSkipped, "|", ++i, "/", total, url(station, lang, campaignId), station.mail)
-
-            if(await coll.find({"station._id": station._id}).count()) {
+            if(await coll.find({campaignId, to: address.address}).count()) {
                 skipped++;
-                console.log("skipping")
+                console.log(++i, "skipped");
                 continue;
             }
 
-            const mailAddress = await maddcoll.findOne({address: station.mail!});
-            if(mailAddress!.stations.length > 1) {
-                mailSkipped++;
-                console.log("skipping");
-                continue;
+            console.log("=".repeat(50));
+            console.log(chalk.green(currentCount), "|", chalk.green(currentStationCount), "|", skipped, "|", ++i, "/", adds.length);
+            console.log(address.address);
+            for(const station of address.stations) {
+                console.log(url(station, lang, campaignId));
             }
 
-            await sleep(5_000);
+            const body = template({stations: address.stations, lang, campaignId});
 
-            const body = template({station, lang, campaignId});
-            const to = station.mail!;
-            if(!station.mail) {
-                console.log("Skipping");
-                continue;
-            }
+            const to = address.address;
 
-            const subject = "Estamos listando su radio en nuestro sitio";
+            const subject = "Estamos listando sus radios en nuestro sitio";
 
             const info = await sendMail({
                 to,
@@ -183,14 +197,15 @@ const test = async () => {
                 subject,
                 campaignId,
                 lang,
-                station: {
-                    _id: station._id,
-                    countryCode: station.countryCode,
-                    slug: station.slug,
-                },
+                stations: address.stations,
                 isTest: false,
                 info
             })
+
+            currentCount++;
+            currentStationCount += address.stations.length;
+            await sleep(20_000);
+
         } catch(e) {
             console.log("[ERROR]:", e.message);
         }
